@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>U online cafe service | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --cream: #fbf3ea;
+            --soft-beige: #f4e7db;
+            --accent: #b86e3c;
+            --accent-2: #e7b58a;
+            --text-dark: #050505;
+            --muted: #6b6b6b;
+            --card: #fff;
+            --shadow: 0 10px 30px rgba(30,30,30,0.08);
+            --radius-lg: 28px;
+            --user-color: #b86e3c;
+            --staff-color: #7a9e7e;
+            --admin-color: #9e6b8e;
+            --user-gradient: linear-gradient(90deg, #b86e3c, #a95733);
+            --staff-gradient: linear-gradient(90deg, #7a9e7e, #5d8a62);
+            --admin-gradient: linear-gradient(90deg, #9e6b8e, #7e5476);
+            --gradient-light: linear-gradient(180deg, var(--cream) 0%, #fff 60%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--gradient-light);
+            display: flex;
+            min-height: 100vh;
+            transition: background-color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        /* ===== GAL2 SIDEBAR & HAMBURGER STYLES ===== */
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1002;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: transparent;
+            border: none;
+        }
+        .hamburger-menu span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--accent);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        .hamburger-menu.active span:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.active span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.3s, opacity 0.3s ease;
+        }
+        .sidebar-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 380px;
+            max-width: 85vw;
+            height: 100%;
+            background: linear-gradient(145deg, #ffffff 0%, var(--cream) 100%);
+            box-shadow: 8px 0 30px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            transition: left 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1.8rem;
+            border-right: 1px solid rgba(184, 110, 60, 0.2);
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.8rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(184, 110, 60, 0.2);
+        }
+        .sidebar-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .close-sidebar {
+            background: var(--soft-beige);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        .close-sidebar:hover {
+            background: var(--accent);
+            color: white;
+            transform: rotate(90deg);
+        }
+        .sidebar-nav {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .sidebar-nav a {
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 16px 24px;
+            border-radius: 60px;
+            color: var(--text-dark);
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: rgba(255,255,255,0.6);
+        }
+        .sidebar-nav a i {
+            width: 32px;
+            color: var(--accent);
+            font-size: 1.4rem;
+        }
+        .sidebar-nav a:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateX(8px);
+        }
+        .sidebar-nav a:hover i {
+            color: white;
+        }
+        .sidebar-nav a.active {
+            background: linear-gradient(90deg, var(--accent), #a95733);
+            color: white;
+            box-shadow: 0 10px 20px rgba(184,110,60,0.25);
+        }
+        .sidebar-nav a.active i {
+            color: white;
+        }
+        .sidebar-nav .signup-link {
+            margin-top: 20px;
+            border-top: 1px solid rgba(184,110,60,0.15);
+            padding-top: 20px;
+        }
+        .sidebar-footer {
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            text-align: center;
+            color: var(--muted);
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        .sidebar-footer p {
+            margin: 8px 0;
+        }
+        /* end gal2 sidebar styles */
+
+        /* Animated dots */
+        .dots {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .dot {
+            position: absolute;
+            background-color: rgba(184, 110, 60, 0.3);
+            border-radius: 50%;
+            will-change: transform;
+            bottom: -20px;
+            animation: floatUp 15s linear infinite;
+            opacity: 0;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) translateX(var(--x-movement));
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% {
+                transform: translateY(calc(-100vh - 100px)) translateX(var(--x-movement));
+                opacity: 0;
+            }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background-color: var(--card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .login-left {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .login-right {
+            flex: 1;
+            background: var(--user-gradient);
+            color: white;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .login-right.user-active { background: var(--user-gradient); }
+        .login-right.staff-active { background: var(--staff-gradient); }
+        .login-right.admin-active { background: var(--admin-gradient); }
+
+        .login-header {
+            margin-bottom: 40px;
+        }
+        .login-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .login-header p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .login-tabs {
+            display: flex;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--muted);
+            transition: all 0.3s;
+            position: relative;
+            font-size: 14px;
+        }
+        .tab-btn.user.active { color: var(--user-color); }
+        .tab-btn.staff.active { color: var(--staff-color); }
+        .tab-btn.admin.active { color: var(--admin-color); }
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            border-radius: 3px 3px 0 0;
+        }
+        .tab-btn.user.active::after { background: var(--user-color); }
+        .tab-btn.staff.active::after { background: var(--staff-color); }
+        .tab-btn.admin.active::after { background: var(--admin-color); }
+
+        .tab-content { display: none; animation: fadeIn 0.5s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(184, 110, 60, 0.18);
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s;
+            background: var(--card);
+        }
+        .user-form .form-control:focus {
+            border-color: var(--user-color);
+            box-shadow: 0 0 0 3px rgba(184, 110, 60, 0.2);
+            outline: none;
+        }
+        .staff-form .form-control:focus {
+            border-color: var(--staff-color);
+            box-shadow: 0 0 0 3px rgba(122, 158, 126, 0.2);
+            outline: none;
+        }
+        .admin-form .form-control:focus {
+            border-color: var(--admin-color);
+            box-shadow: 0 0 0 3px rgba(158, 107, 142, 0.2);
+            outline: none;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 28px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        .btn-user { background: var(--user-gradient); color: white; width: 100%; }
+        .btn-user:hover { background: linear-gradient(90deg, #a95733, #b86e3c); transform: translateY(-2px); }
+        .btn-staff { background: var(--staff-gradient); color: white; width: 100%; }
+        .btn-staff:hover { background: linear-gradient(90deg, #5d8a62, #7a9e7e); transform: translateY(-2px); }
+        .btn-admin { background: var(--admin-gradient); color: white; width: 100%; }
+        .btn-admin:hover { background: linear-gradient(90deg, #7e5476, #9e6b8e); transform: translateY(-2px); }
+
+        .btn-google {
+            background-color: white;
+            color: #5f6368;
+            border: 2px solid rgba(184, 110, 60, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            font-weight: 500;
+            border-radius: 28px;
+            padding: 12px;
+        }
+        .btn-google:hover { background-color: var(--soft-beige); transform: translateY(-2px); }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid rgba(184, 110, 60, 0.18);
+        }
+        .divider::before { margin-right: 10px; }
+        .divider::after { margin-left: 10px; }
+
+        .login-footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .login-footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .login-footer a:hover { text-decoration: underline; }
+
+        .error-message { color: #dc3545; font-size: 12px; margin-top: 5px; display: none; }
+        .forgot-link {
+            font-size: 13px;
+            text-decoration: none;
+            text-align: right;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .user-form .forgot-link { color: var(--user-color); }
+        .staff-form .forgot-link { color: var(--staff-color); }
+        .admin-form .forgot-link { color: var(--admin-color); }
+        .forgot-link:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .login-container { flex-direction: column; }
+            .login-left, .login-right { padding: 40px; }
+            .login-right { order: -1; }
+        }
+        @media (max-width: 480px) {
+            .login-left, .login-right { padding: 30px 20px; }
+            .login-tabs { flex-direction: column; }
+            .tab-btn { padding: 10px; }
+        }
+
+        /* DARK MODE - ONLY BACKGROUND AND DOTS CHANGE, LOGIN BOX STAYS LIGHT */
+        body.dark-mode {
+            background: #0a0c10;
+        }
+        body.dark-mode .dot {
+            background-color: rgba(231, 181, 138, 0.2);
+        }
+        /* Keep the login container completely light (no dark changes) */
+        body.dark-mode .login-container {
+            background-color: var(--card);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-mode .login-header h1,
+        body.dark-mode .form-group label,
+        body.dark-mode .login-header p,
+        body.dark-mode .login-footer,
+        body.dark-mode .divider,
+        body.dark-mode .forgot-link {
+            color: initial; /* keep original colors */
+        }
+        /* Sidebar dark mode: keep it readable but still distinct */
+        body.dark-mode .sidebar {
+            background: linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%);
+            border-right-color: rgba(184,110,60,0.3);
+        }
+        body.dark-mode .sidebar-nav a {
+            background: rgba(30,30,30,0.8);
+            color: #e0e0e0;
+        }
+        body.dark-mode .sidebar-nav a i { color: var(--accent-2); }
+        body.dark-mode .sidebar-nav a:hover { background: var(--accent); color: white; }
+        body.dark-mode .sidebar-footer { color: #aaa; border-top-color: #444; }
+        body.dark-mode .close-sidebar { background: #333; color: var(--accent-2); }
+        /* Ensure form controls stay light in dark mode (override any unwanted darkening) */
+        body.dark-mode .form-control {
+            background-color: white;
+            color: #333;
+            border-color: rgba(184, 110, 60, 0.3);
+        }
+        body.dark-mode .btn-google {
+            background-color: white;
+            color: #5f6368;
+            border-color: rgba(184, 110, 60, 0.2);
+        }
+        body.dark-mode .btn-google:hover {
+            background-color: var(--soft-beige);
+        }
+
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--user-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1003;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+        body.dark-mode .mode-toggle { background: var(--accent-2); }
+        .mode-toggle:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <!-- Animated dots background -->
+    <div class="dots" id="dotsContainer"></div>
+
+    <!-- GAL2 Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- GAL2 Sidebar & Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebarNav">
+        <div class="sidebar-header">
+            <span class="sidebar-logo">U Café</span>
+            <div class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about1.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+            <a href="testimonials.html"><i class="fas fa-star"></i> Testimonials</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="signup.html" class="signup-link"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+        <div class="sidebar-footer">
+            <p><i class="fas fa-coffee"></i> Ayer-Amba Student Project</p>
+            <p>Ethiopian tradition & digital fusion</p>
+        </div>
+    </div>
+
+    <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="login-container">
+            <div class="login-left">
+                <div class="login-header">
+                    <h1>Welcome Back</h1><br>
+                    To U Café Online Service
+                    <p>Join our cafe and enjoy it by ordering items! ❤️</p>
+                </div>
+
+                <div class="login-tabs">
+                    <button class="tab-btn user active" data-tab="user-login">User Login</button>
+                    <button class="tab-btn staff" data-tab="staff-login">Staff Login</button>
+                    <button class="tab-btn admin" data-tab="admin-login">Admin Login</button>
+                </div>
+
+                <button class="btn btn-google" id="googleLogin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <span>Continue with Google</span>
+                </button>
+
+                <div class="divider">or sign in with email</div>
+
+                <div id="user-login" class="tab-content user-form active">
+                    <form id="userLoginForm">
+                        <div class="form-group">
+                            <label for="user-email">Email Address</label>
+                            <input type="email" id="user-email" class="form-control" placeholder="Enter your email" required>
+                            <div class="error-message" id="user-email-error">Please enter a valid email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-phone">Phone Number</label>
+                            <input type="tel" id="user-phone" class="form-control" placeholder="e.g., 0912345678 or +251-912345678" required>
+                            <div class="error-message" id="user-phone-error">Phone must be Ethiopian format: 09xxxxxxxx or +2519xxxxxxxx / +251-9xxxxxxxx</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-password">Password</label>
+                            <input type="password" id="user-password" class="form-control" placeholder="Enter your password" required>
+                            <div class="error-message" id="user-password-error">Password must be at least 6 characters</div>
+                        </div>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                        <button type="submit" class="btn btn-user">User Sign In</button>
+                    </form>
+                </div>
+
+                <div id="staff-login" class="tab-content staff-form">
+                    <form id="staffLoginForm">
+                        <div class="form-group">
+                            <label for="staff-email">Staff Email</label>
+                            <input type="email" id="staff-email" class="form-control" placeholder="Enter staff email" required>
+                            <div class="error-message" id="staff-email-error">Please enter a valid email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="staff-phone">Staff Phone Number</label>
+                            <input type="tel" id="staff-phone" class="form-control" placeholder="e.g., 0912345678 or +251-912345678" required>
+                            <div class="error-message" id="staff-phone-error">Phone must be Ethiopian format: 09xxxxxxxx or +2519xxxxxxxx / +251-9xxxxxxxx</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="staff-department">Department</label>
+                            <select id="staff-department" class="form-control" required>
+                                <option value="">Select your department</option>
+                                <option value="kitchen">Kitchen</option>
+                                <option value="service">Service</option>
+                                <option value="barista">Barista</option>
+                                <option value="management">Management</option>
+                                <option value="cleaning">Cleaning</option>
+                            </select>
+                            <div class="error-message" id="staff-department-error">Please select your department</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="staff-password">Password</label>
+                            <input type="password" id="staff-password" class="form-control" placeholder="Enter your password" required>
+                            <div class="error-message" id="staff-password-error">Password must be at least 6 characters</div>
+                        </div>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                        <button type="submit" class="btn btn-staff">Staff Sign In</button>
+                    </form>
+                </div>
+
+                <div id="admin-login" class="tab-content admin-form">
+                    <form id="adminLoginForm">
+                        <div class="form-group">
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" class="form-control" placeholder="Enter admin email" required>
+                            <div class="error-message" id="admin-email-error">Please enter a valid admin email</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Admin Password</label>
+                            <input type="password" id="admin-password" class="form-control" placeholder="Enter admin password" required>
+                            <div class="error-message" id="admin-password-error">Password must be at least 8 characters</div>
+                        </div>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                        <button type="submit" class="btn btn-admin">Admin Sign In</button>
+                    </form>
+                </div>
+
+                <div class="login-footer">
+                    Don't have an account? <a href="signup.html">Sign up</a>
+                </div>
+            </div>
+
+            <div class="login-right user-active" id="loginRight">
+                <div class="right-content">
+                    <h2>U Café Online Service</h2>
+                    <p>Order and Enjoy! 😍</p>
+                    <div>
+                        <p>
+                            In quiet glow of screens so bright,<br>
+                            We gather here, though out of sight.<br>
+                            A sip of coffee, warm and deep,<br>
+                            As keystrokes dance and thoughts take flight.<br><br>
+                            No need for chairs or tables set,<br>
+                            Just Wi-Fi waves we won't forget.<br>
+                            A latte served through pixels fine,<br>
+                            Your order placed—no need to fret.<br><br>
+                            The barista's code, both swift and sweet,<br>
+                            Brews connection in this virtual seat.<br>
+                            From dusk till dawn, we log in, stay,<br>
+                            Where coffee meets the digital beat.<br><br>
+                            So raise your mug (or charging cord),<br>
+                            To this café we can't afford to ignore.<br>
+                            For in this space of ones and zeros,<br>
+                            Friendship blooms—and joy is stored.<br>
+                            ☕✨ Enjoy with online café
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ========== ANIMATED DOTS ==========
+            function createDots() {
+                const dotsContainer = document.getElementById('dotsContainer');
+                const dotCount = 150;
+                for (let i = 0; i < dotCount; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    const size = Math.random() * 9 + 3;
+                    dot.style.width = `${size}px`;
+                    dot.style.height = `${size}px`;
+                    dot.style.left = `${Math.random() * 100}vw`;
+                    dot.style.bottom = '-20px';
+                    const xMovement = (Math.random() * 100 - 50);
+                    dot.style.setProperty('--x-movement', `${xMovement}px`);
+                    const duration = Math.random() * 10 + 10;
+                    dot.style.animationDuration = `${duration}s`;
+                    const delay = Math.random() * 15;
+                    dot.style.animationDelay = `${delay}s`;
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            createDots();
+
+            // ========== GAL2 SIDEBAR LOGIC ==========
+            const hamburger = document.getElementById('hamburgerMenu');
+            const sidebar = document.getElementById('sidebarNav');
+            const overlay = document.getElementById('sidebarOverlay');
+            const closeSide = document.getElementById('closeSidebarBtn');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                hamburger.classList.add('active');
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+                hamburger.classList.remove('active');
+            }
+            if (hamburger) hamburger.addEventListener('click', openSidebar);
+            if (closeSide) closeSide.addEventListener('click', closeSidebar);
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.addEventListener('click', () => { setTimeout(closeSidebar, 150); });
+            });
+
+            // ========== CHECKOUT INTENT ==========
+            const urlParams = new URLSearchParams(window.location.search);
+            const checkoutIntent = urlParams.get('checkout');
+            const returnUrl = urlParams.get('return') || 'menu.html';
+
+            function handleLoginSuccess(userType, email, phone = '') {
+                const userData = { email: email, phone: phone, type: userType, loginTime: new Date().toISOString() };
+                localStorage.setItem('currentUser', JSON.stringify(userData));
+                if (userType === 'admin') {
+                    window.location.href = 'das.html';
+                } else {
+                    if (checkoutIntent === 'true') {
+                        window.location.href = returnUrl + '?login_success=true&checkout=true&email=' + encodeURIComponent(email) + '&type=' + userType;
+                    } else {
+                        window.location.href = returnUrl + '?login_success=true&email=' + encodeURIComponent(email) + '&type=' + userType;
+                    }
+                }
+            }
+
+            // ========== TAB SWITCHING ==========
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const loginRight = document.getElementById('loginRight');
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    loginRight.classList.remove('user-active', 'staff-active', 'admin-active');
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                    if (this.classList.contains('user')) loginRight.classList.add('user-active');
+                    else if (this.classList.contains('staff')) loginRight.classList.add('staff-active');
+                    else if (this.classList.contains('admin')) loginRight.classList.add('admin-active');
+                });
+            });
+
+            // Ethiopian phone validator
+            function isValidEthiopianPhone(phone) {
+                const phoneRegex = /^(09\d{8}|\+251-?9\d{8})$/;
+                return phoneRegex.test(phone);
+            }
+
+            function isValidUser(email, password, type) {
+                if (type === 'user') {
+                    const users = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+                    return users.some(u => u.email === email && u.password === password);
+                } else if (type === 'staff') {
+                    return email === 'staff@example.com' && password === 'staffpass123';
+                } else if (type === 'admin') {
+                    return email === 'admin@example.com' && password === 'adminpass123';
+                }
+                return false;
+            }
+
+            // User Login
+            const userLoginForm = document.getElementById('userLoginForm');
+            userLoginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('user-email');
+                const phone = document.getElementById('user-phone');
+                const password = document.getElementById('user-password');
+                const emailError = document.getElementById('user-email-error');
+                const phoneError = document.getElementById('user-phone-error');
+                const passwordError = document.getElementById('user-password-error');
+                let isValid = true;
+                if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                    emailError.style.display = 'block';
+                    email.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    emailError.style.display = 'none';
+                    email.style.borderColor = 'rgba(184, 110, 60, 0.18)';
+                }
+                if (!phone.value || !isValidEthiopianPhone(phone.value.trim())) {
+                    phoneError.style.display = 'block';
+                    phone.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    phoneError.style.display = 'none';
+                    phone.style.borderColor = 'rgba(184, 110, 60, 0.18)';
+                }
+                if (!password.value || password.value.length < 6) {
+                    passwordError.style.display = 'block';
+                    password.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    passwordError.style.display = 'none';
+                    password.style.borderColor = 'rgba(184, 110, 60, 0.18)';
+                }
+                if (isValid) {
+                    if (isValidUser(email.value, password.value, 'user')) {
+                        handleLoginSuccess('user', email.value, phone.value.trim());
+                    } else {
+                        alert('Invalid email or password. If you haven\'t signed up, please create an account first.');
+                    }
+                }
+            });
+
+            // Staff Login
+            const staffLoginForm = document.getElementById('staffLoginForm');
+            staffLoginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('staff-email');
+                const phone = document.getElementById('staff-phone');
+                const password = document.getElementById('staff-password');
+                const department = document.getElementById('staff-department');
+                const emailError = document.getElementById('staff-email-error');
+                const phoneError = document.getElementById('staff-phone-error');
+                const passwordError = document.getElementById('staff-password-error');
+                const departmentError = document.getElementById('staff-department-error');
+                let isValid = true;
+                if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                    emailError.style.display = 'block';
+                    email.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    emailError.style.display = 'none';
+                    email.style.borderColor = 'rgba(122, 158, 126, 0.18)';
+                }
+                if (!phone.value || !isValidEthiopianPhone(phone.value.trim())) {
+                    phoneError.style.display = 'block';
+                    phone.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    phoneError.style.display = 'none';
+                    phone.style.borderColor = 'rgba(122, 158, 126, 0.18)';
+                }
+                if (!password.value || password.value.length < 6) {
+                    passwordError.style.display = 'block';
+                    password.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    passwordError.style.display = 'none';
+                    password.style.borderColor = 'rgba(122, 158, 126, 0.18)';
+                }
+                if (!department.value) {
+                    departmentError.style.display = 'block';
+                    department.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    departmentError.style.display = 'none';
+                    department.style.borderColor = 'rgba(122, 158, 126, 0.18)';
+                }
+                if (isValid) {
+                    if (isValidUser(email.value, password.value, 'staff')) {
+                        handleLoginSuccess('staff', email.value, phone.value.trim());
+                    } else {
+                        alert('Invalid staff email or password');
+                    }
+                }
+            });
+
+            // Admin Login
+            const adminLoginForm = document.getElementById('adminLoginForm');
+            adminLoginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('admin-email');
+                const password = document.getElementById('admin-password');
+                const emailError = document.getElementById('admin-email-error');
+                const passwordError = document.getElementById('admin-password-error');
+                let isValid = true;
+                if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                    emailError.style.display = 'block';
+                    email.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    emailError.style.display = 'none';
+                    email.style.borderColor = 'rgba(158, 107, 142, 0.18)';
+                }
+                if (!password.value || password.value.length < 8) {
+                    passwordError.style.display = 'block';
+                    password.style.borderColor = '#dc3545';
+                    isValid = false;
+                } else {
+                    passwordError.style.display = 'none';
+                    password.style.borderColor = 'rgba(158, 107, 142, 0.18)';
+                }
+                if (isValid) {
+                    if (isValidUser(email.value, password.value, 'admin')) {
+                        handleLoginSuccess('admin', email.value);
+                    } else {
+                        alert('Invalid admin email or password');
+                    }
+                }
+            });
+
+            // Google Login Demo
+            document.getElementById('googleLogin').addEventListener('click', function() {
+                const activeTab = document.querySelector('.tab-btn.active');
+                const isAdmin = activeTab.classList.contains('admin');
+                const isStaff = activeTab.classList.contains('staff');
+                if (isAdmin) {
+                    alert('Admin Google login would redirect to admin authentication');
+                } else if (isStaff) {
+                    alert('Staff Google login would redirect to staff authentication');
+                } else {
+                    handleLoginSuccess('user', 'user@gmail.com', '+251-912345678');
+                }
+            });
+
+            // Dark mode toggle - now only changes background, not the login box
+            const modeToggle = document.getElementById('modeToggle');
+            const modeIcon = modeToggle.querySelector('i');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+                document.body.classList.add('dark-mode');
+                modeIcon.classList.remove('fa-moon');
+                modeIcon.classList.add('fa-sun');
+            }
+            modeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                    modeIcon.classList.remove('fa-moon');
+                    modeIcon.classList.add('fa-sun');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    modeIcon.classList.remove('fa-sun');
+                    modeIcon.classList.add('fa-moon');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

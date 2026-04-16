@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>U Online Café — Home</title>
+
+  <!-- fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="mainHeader">
+    <div class="container nav-inner">
+      <a class="brand" href="#">
+        <img src="u cafe 1 logo.png" alt="U Café logo">
+        <span>U Café</span>
+      </a>
+
+      <nav>
+        <ul id="navList">
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="auth">
+        <a href="login.html" class="user-icon" id="loginBtn" title="Log in">
+          <i class="fas fa-user"></i>
+        </a>
+        <button class="menu-toggle" id="menuBtn" aria-label="menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <!-- LEFT: text -->
+        <div class="hero-left">
+          <div class="kicker">Welcome</div>
+          <h1>Welcome to U online<br/>Cafés Service</h1>
+          <p>Freshly brewed coffee, handcrafted pastries and cozy vibes — order online and enjoy premium taste at home or reserve a table for a special moment.</p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="menu.html"><i class="fas fa-shopping-bag"></i> Order now & enjoy</a>
+            <a class="btn btn-outline" href="contact.html"><i class="fas fa-calendar-alt"></i> Book a table</a>
+          </div>
+
+          <!-- small pagination dots like sample -->
+          <div style="margin-top:18px;">
+            <div class="muted" style="font-size:0.92rem;">Popular: Caramel Macchiato · Butter Croissant · Doro Wat</div>
+          </div>
+        </div>
+
+       <!-- RIGHT: Food/Cafe images gallery -->
+<div class="hero-art" aria-hidden="true">
+  <div class="food-carousel">
+    <!-- Carousel Container -->
+    <div class="carousel-container">
+      <!-- Slides will be dynamically added here by JavaScript -->
+      <div class="carousel-slide active">
+        <img src="Caramel Macchiato1.png" alt="Specialty Coffee">
+        <div class="food-label">Specialty Coffee</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Butter Croissant.png" alt="Fresh Pastries">
+        <div class="food-label">Fresh Pastries</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="ጮርናቄ አሰራርፖስቲ አሰራር Pasti 1.PNG" alt="School Favorites">
+        <div class="food-label">School Favorites</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Moya1.PNG" alt="School Favorites">
+        <div class="food-label">School Favorites</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Fresh Orange Juice1.PNG" alt="Artisan Coffee">
+        <div class="food-label">Juices</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Chicken Tibs1.PNG" alt="Homemade Pastries">
+        <div class="food-label">Tibs Variety</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Chai Latte1.PNG" alt="Homemade Pastries">
+        <div class="food-label">Tea</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Vegetarian Combo1.PNG" alt="Homemade Pastries">
+        <div class="food-label">Injera Specials</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Doro Wat1.PNG" alt="Homemade Pastries">
+        <div class="food-label">Traditional Menu</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="Buna with Popcorn1.PNG" alt="Homemade Pastries">
+        <div class="food-label">Ethiopian Coffee</div>
+      </div>
+      
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <button class="carousel-btn prev-btn" aria-label="Previous image">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-btn next-btn" aria-label="Next image">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Indicators/Dots -->
+    <div class="carousel-indicators">
+      <!-- Dots will be added by JavaScript -->
+    </div>
+  </div>
+</div>
+    </section>
+
+         <!-- MENU SECTION - UPDATED WITH REAL MENU ITEMS & IMAGES -->
+    <section id="menu" class="container">
+      <div class="menu-header" style="text-align: center; margin-bottom: 40px;">
+        <h2>Our Special Menu</h2>
+        <p class="muted" style="max-width: 600px; margin: 0 auto; margin-top: 10px;">Discover our handcrafted coffee, traditional dishes and fresh pastries</p>
+      </div>
+      
+      <div class="menu-grid">
+        <!-- Caramel Macchiato -->
+        <div class="menu-item">
+          <div class="menu-item-img">
+            <img src="Caramel Macchiato1.png" alt="Caramel Macchiato">
+          </div>
+          <div class="menu-item-content">
+            <h3>Caramel Macchiato</h3>
+            <p>Espresso with vanilla syrup, steamed milk, and rich caramel drizzle — a sweet and creamy delight.</p>
+            <div class="price">$5.25</div>
+          </div>
+        </div>
+        
+        <!-- Butter Croissant -->
+        <div class="menu-item">
+          <div class="menu-item-img">
+            <img src="Butter Croissant.png" alt="Butter Croissant">
+          </div>
+          <div class="menu-item-content">
+            <h3>Butter Croissant</h3>
+            <p>Classic French croissant with layers of golden, flaky, buttery pastry — baked fresh daily.</p>
+            <div class="price">$3.25</div>
+          </div>
+        </div>
+        
+        <!-- Doro Wat (Traditional) -->
+        <div class="menu-item">
+          <div class="menu-item-img">
+            <img src="Doro Wat1.PNG" alt="Doro Wat">
+          </div>
+          <div class="menu-item-content">
+            <h3>Doro Wat</h3>
+            <p>Ethiopian spicy chicken stew simmered with berbere spice, served with injera and boiled egg.</p>
+            <div class="price">$12.99</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Button in bottom right - now links to full menu page -->
+      <div style="display: flex; justify-content: flex-end; margin-top: 30px;">
+        <a href="menu.html" class="see-all-btn">See all items →</a>
+      </div>
+    </section>
+
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container" style="margin-top:34px">
+      <div class="footer-grid">
+        <div>
+          <img src="u cafe 1 logo.png" alt="U Café logo">
+          <h4>U Café</h4>
+          <p>Premium coffee and handcrafted pastries. Cozy atmosphere and friendly staff.</p>
+          <div style="margin-top: 12px">
+                        <a class="muted" href="https://facebook.com" target="_blank"><i class="fab fa-facebook" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://twitter.com" target="_blank"><i class="fab fa-twitter" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="margin-right: 8px"></i></a>
+                    </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="about.html">About</a></p>
+          <p><a href="menu.html">Menu</a></p>
+          <p><a href="testimonials.html">Testimonials</a></p>
+          <p><a href="#gallery">Gallery</a></p>
+          <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <p>Seasonal specials</p>
+          <p>Pastries</p>
+          <p>Coffee</p>
+        </div>
+        <div>
+          <h4>Newsletter</h4>
+          <div class="newsletter">
+            <input type="email" id="newsletterEmail" placeholder="Your email" />
+            <button class="btn btn-primary" id="subscribeBtn" style="width:100%;margin-top:8px">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="margin-top:28px;text-align:center;">
+        <div class="muted">© <span id="year"></span> U Café • Designed to match your sample</div>
+      </div>
+    </div>
+  </footer>
+  <!-- ---------- SCRIPTS ---------- -->
+<script src="index.js"></script>
+</body>
+</html>

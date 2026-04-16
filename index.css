@@ -1,0 +1,683 @@
+/* ---------- Variables ---------- */
+:root{
+  --cream: #fbf3ea;
+  --soft-beige:#f4e7db;
+  --accent:#b86e3c;        /* darker caramel */
+  --accent-2:#e7b58a;      /* lighter */
+  --text-dark:#050505;
+  --muted:#6b6b6b;
+  --card:#fff;
+  --radius-lg:28px;
+  --shadow: 0 10px 30px rgba(30,30,30,0.08);
+}
+
+/* ---------- Reset ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color:var(--text-dark);
+  background: linear-gradient(180deg, var(--cream) 0%, #fff 60%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+.container{width:92%;max-width:1200px;margin:0 auto;}
+
+/* ---------- HEADER with icon-only login ---------- */
+header{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  height:100px; /* Changed from 90px */
+  z-index:50;
+  display:flex;
+  align-items:center;
+  background:transparent;
+  padding:0 18px;
+  backdrop-filter: blur(5px);
+}
+
+.nav-inner{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:16px; /* Increased from 12px */
+  text-decoration:none;
+  color:var(--text-dark);
+  font-weight:800;
+  font-size:28px; /* Increased from 26px */
+}
+
+.brand img{
+  width:160px; /* Changed from 180px - narrower */
+  height:70px; /* Changed from 60px - taller */
+  border-radius:12px; /* Changed from 50% - rectangular with soft corners */
+  object-fit:contain; /* Ensures full logo is visible */
+  box-shadow:var(--shadow);
+  background-color: var(--cream);
+  padding:4px; /* Reduced from 8px - less space around logo */
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+
+nav a{
+  color:var(--text-dark);
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+.auth{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* Icon-only user button (replaces the boxed button) */
+.icon-only-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.icon-only-btn:hover {
+  color: var(--accent);
+  background: rgba(240, 127, 52, 0.1);
+  transform: scale(1.1);
+}
+
+.menu-toggle{
+  display:none;
+  font-size:22px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  color: var(--text-dark);
+}
+
+/* User icon styles */
+.user-icon {
+  color: var(--muted);
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.user-icon:hover {
+  color: var(--accent);
+  background: rgba(184, 110, 60, 0.1);
+  transform: scale(1.1);
+}
+
+/* ---------- HERO ---------- */
+section.hero{
+  padding-top:130px; /* Increased from 120px */
+  padding-bottom:60px;
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr 520px;
+  gap:36px;
+  align-items:center;
+  width:100%;
+}
+
+/* hero left */
+.hero-left{
+  max-width:640px;
+}
+
+.kicker{
+  display:inline-block;
+  padding:8px 14px;
+  background:var(--soft-beige);
+  border-radius:18px;
+  font-weight:600;
+  color:var(--muted);
+  margin-bottom:18px;
+  font-size:0.94rem;
+}
+
+.hero-left h1{
+  font-family:"Playfair Display", serif;
+  font-size:48px;
+  line-height:1.02;
+  margin-bottom:16px;
+  color:var(--text-dark);
+  font-weight:700;
+}
+
+.hero-left p{
+  color:var(--muted);
+  font-size:1.05rem;
+  margin-bottom:26px;
+  max-width:54ch;
+}
+
+.hero-cta{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 22px;
+  border-radius:28px;
+  border:0;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow:var(--shadow);
+  text-decoration:none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),#a95733);
+  color:#fff;
+}
+
+.btn-outline{
+  background:transparent;
+  border:2px solid rgba(184,110,60,0.18);
+  color:var(--accent);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 110, 60, 0.2);
+}
+
+/* ---------- CAROUSEL STYLES ---------- */
+.hero-art {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-slide .food-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-indicator.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.carousel-indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Animation for food label */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* small dots/pagination decoration */
+.dots{
+  display:flex;
+  gap:6px;
+  justify-content:center;
+  margin-top:8px;
+}
+
+.dots span{
+  width:8px;
+  height:8px;
+  background:#f1d7c1;
+  border-radius:50%;
+  display:inline-block;
+}
+
+/* ---------- MENU SECTION (UPDATED WITH IMAGES) ---------- */
+#menu {
+  padding: 80px 0;
+  background: var(--soft-beige);
+  border-radius: 30px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.menu-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.see-all-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.see-all-btn:hover {
+  background: rgba(184, 110, 60, 0.1);
+  transform: translateX(5px);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Image styling inside menu cards */
+.menu-item-img {
+  height: 200px;
+  overflow: hidden;
+  background: var(--soft-beige);
+}
+
+.menu-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.menu-item:hover .menu-item-img img {
+  transform: scale(1.05);
+}
+
+.menu-item-content {
+  padding: 20px;
+}
+
+.menu-item-content h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.menu-item-content p {
+  color: var(--muted);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.price {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+}
+
+/* ---------- GALLERY (UPDATED IMAGES) ---------- */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.gallery-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: var(--text-dark);
+}
+
+.gallery{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  min-height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  display:block;
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials{
+  padding:36px;
+  border-radius:22px;
+  background:linear-gradient(180deg,#fff 0%, #fffbf8 100%);
+  box-shadow:var(--shadow);
+}
+
+.test-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.testimonial{
+  flex:1;
+  padding:18px;
+  border-radius:16px;
+  background:linear-gradient(180deg,#fff,#fff);
+  box-shadow:0 6px 18px rgba(0,0,0,0.04);
+}
+
+.testimonial p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.testimonial small{
+  display:block;
+  margin-top:10px;
+  color:var(--accent);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  margin-top:60px;
+  padding:48px 0;
+  background:transparent;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+footer h4{
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+footer p, footer a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:0.95rem;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* FOOTER LOGO - MATCHING HEADER LOGO */
+footer img{
+  width:160px; /* Match header logo width */
+  height:70px; /* Match header logo height */
+  border-radius:12px; /* Match header logo corners */
+  object-fit:contain; /* Ensures full logo is visible */
+  box-shadow:var(--shadow);
+  display:block;
+  margin-bottom:12px;
+  background-color: var(--cream);
+  padding:4px; /* Match header logo padding */
+}
+
+.newsletter input{
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #eee;
+  width:100%;
+  margin-bottom:10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.footer-bottom{
+  text-align:center;
+  color:var(--muted);
+  margin-top:18px;
+  font-size:0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr 420px}
+  .hero-left h1{font-size:40px}
+  .footer-grid{grid-template-columns:repeat(2,1fr); gap:30px;}
+}
+
+@media (max-width:860px){
+  nav ul{display:none}
+  .menu-toggle{display:block}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{margin-top:18px}
+  .food-carousel{max-width: 86%; margin:0 auto}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .brand img {
+    width: 140px; /* Slightly smaller on tablets */
+    height: 65px;
+  }
+  footer img {
+    width: 140px; /* Match header adjustment */
+    height: 65px;
+  }
+}
+
+@media (max-width:520px){
+  .hero-left h1{font-size:28px}
+  .gallery{grid-template-columns:1fr}
+  .food-carousel{max-width: 92%}
+  .footer-grid{grid-template-columns:1fr; gap:30px;}
+  .menu-grid { grid-template-columns: 1fr; }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .food-carousel {
+    height: 350px;
+  }
+  .brand img {
+    width: 120px; /* Smaller on mobile */
+    height: 55px;
+  }
+  footer img {
+    width: 120px; /* Match header adjustment */
+    height: 55px;
+  }
+  header {
+    height: 90px; /* Slightly smaller header on mobile */
+  }
+  section.hero {
+    padding-top: 110px; /* Adjusted for smaller header on mobile */
+  }
+}
+
+/* small helpers */
+.muted{color:var(--muted)}
+.center{text-align:center}
