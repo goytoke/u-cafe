@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U Café - Contact & Reviews</title>
+
+  <!-- fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <header id="mainHeader">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <img src="u cafe 1 logo.png" alt="U Café logo">
+        <span data-i18n="brand">U Café</span>
+      </a>
+      <nav>
+        <ul id="navList">
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="menu.html" data-i18n="nav_menu">Menu</a></li>
+          <li><a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a></li>
+          <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="#" data-i18n="nav_contact" style="color: var(--accent);">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth">
+        <div class="language-switcher">
+          <button class="language-btn" id="langBtn">
+            <img src="https://flagcdn.com/w20/gb.png" alt="English flag" id="currentLangFlag">
+            <span id="currentLangName">English</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="language-dropdown" id="langDropdown">
+            <div class="language-option" data-lang="en">
+              <img class="lang-flag-img" src="https://flagcdn.com/w40/gb.png" alt="English flag">
+              English
+            </div>
+            <div class="language-option" data-lang="am">
+              <img class="lang-flag-img" src="ethiopia-flag.png" alt="Ethiopian flag">
+              አማርኛ (Amharic)
+            </div>
+            <div class="language-option" data-lang="or">
+              <img class="lang-flag-img" src="oromia-flag.png" alt="Oromia flag">
+              Oromoo (Oromia)
+            </div>
+            <div class="language-option" data-lang="ti">
+              <img class="lang-flag-img" src="tigray-flag.png" alt="Tigray flag">
+              ትግርኛ (Tigray)
+            </div>
+          </div>
+        </div>
+        <a href="login.html" class="user-icon" id="loginBtn" title="Log in"><i class="fas fa-user"></i></a>
+        <button class="menu-toggle" id="menuBtn" aria-label="menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="section-title">
+        <h1 data-i18n="contact_title">Contact Us</h1>
+        <p data-i18n="contact_subtitle">We'd love to hear from you</p>
+      </div>
+      <div class="combined-contact-section">
+        <div class="contact-info">
+          <h2 data-i18n="get_in_touch">Get In Touch</h2>
+          <div class="rating-container">
+            <div class="rating-text" data-i18n="google_rating">⭐ Google Rating</div>
+            <div class="rating-stars" id="googleStars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="review-count"><strong>U Café!</strong><br>42 Google reviews</div>
+            <div class="user-rating-section" id="userRatingSection">
+              <div class="rating-text" data-i18n="community_reviews">✍️ Community Reviews</div>
+              <div class="rating-stars" id="userStarsDisplay"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <div class="review-count" id="userReviewCount">0 reviews · Be the first!</div>
+            </div>
+            <a href="#" class="write-review" id="writeReviewBtn" data-i18n="write_review">✍️ Write a review</a>
+          </div>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><p data-i18n="address">AYER AMBA Secondary School, Bole Michael</p></div>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-phone"></i></div><p>(123) 456-7890</p></div>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-envelope"></i></div><p>ucafeteam@nymthf.com</p></div>
+          <div class="info-item"><div class="info-icon"><i class="fas fa-clock"></i></div><p data-i18n="hours">Mon-Fri: 7am-9pm<br>Sat-Sun: 8am-10pm</p></div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h2 data-i18n="send_message_title">Send Us a Message</h2>
+          <form id="contactForm">
+            <div class="form-group"><label data-i18n="your_name" for="name">Your Name</label><input type="text" id="name" name="name" required></div>
+            <div class="form-group"><label data-i18n="your_email" for="email">Your Email</label><input type="email" id="email" name="email" required></div>
+            <div class="form-group"><label data-i18n="phone_number" for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
+            <div class="form-group"><label data-i18n="subject" for="subject">Subject</label><select id="subject" name="subject"><option value="general" data-i18n="general_inquiry">General Inquiry</option><option value="order" data-i18n="order_related">Order Related</option><option value="feedback" data-i18n="feedback">Feedback</option><option value="other" data-i18n="other">Other</option></select></div>
+            <div class="form-group"><label data-i18n="message_label" for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+            <button type="submit" class="submit-btn" data-i18n="send_btn">Send Message</button>
+            <div id="form-message"></div>
+          </form>
+          <p class="privacy-note" data-i18n="privacy_note">We respect your privacy. Your information will not be shared.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- REVIEW MODAL -->
+  <div id="reviewModal" class="review-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-star"></i> <span data-i18n="modal_title">Share Your Experience</span></h3>
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="reviewForm">
+          <div class="form-group"><label data-i18n="reviewer_name_label" for="reviewerName">Your name (optional)</label><input type="text" id="reviewerName" placeholder="e.g., Coffee Lover"></div>
+          <div class="form-group"><label data-i18n="rating_label">Your rating ★</label><div class="star-rating-input" id="starRatingWidget"><i class="far fa-star" data-value="5"></i><i class="far fa-star" data-value="4"></i><i class="far fa-star" data-value="3"></i><i class="far fa-star" data-value="2"></i><i class="far fa-star" data-value="1"></i></div><input type="hidden" id="selectedRating" value="0"><small data-i18n="click_stars" style="color:var(--muted)">Click on stars to rate</small></div>
+          <div class="form-group"><label data-i18n="review_title_label" for="reviewTitle">Review title (optional)</label><input type="text" id="reviewTitle" placeholder="e.g., Amazing coffee!"></div>
+          <div class="form-group"><label data-i18n="review_content_label" for="reviewContent">Your review *</label><textarea id="reviewContent" rows="4" placeholder="Tell us about your visit..." required></textarea></div>
+          <button type="submit" class="review-submit-btn" data-i18n="submit_review_btn">Submit Review 🌟</button>
+        </form>
+        <div id="reviewModalMessage" style="margin-top:15px; text-align:center;"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container" style="margin-top:34px">
+      <div class="footer-grid">
+        <div><img src="u cafe 1 logo.png" alt="U Café logo"><h4 data-i18n="footer_brand">U Café</h4><p data-i18n="footer_desc">Premium coffee and handcrafted pastries. Cozy atmosphere and friendly staff.</p><div><a class="muted" href="#"><i class="fab fa-facebook"></i></a> <a class="muted" href="#"><i class="fab fa-instagram"></i></a> <a class="muted" href="#"><i class="fab fa-twitter"></i></a></div></div>
+        <div><h4 data-i18n="quick_links">Quick Links</h4><p><a href="about.html" data-i18n="footer_about">About</a></p><p><a href="menu.html" data-i18n="footer_menu">Menu</a></p><p><a href="gallery.html" data-i18n="footer_gallery">Gallery</a></p><p><a href="testimonials.html" data-i18n="footer_testimonials">Testimonials</a></p><p><a href="#" data-i18n="footer_contact">Contact</a></p></div>
+        <div><h4 data-i18n="explore">Explore</h4><p data-i18n="specials">Seasonal specials</p><p data-i18n="pastries">Pastries</p><p data-i18n="coffee">Coffee</p><p data-i18n="tea">Tea</p></div>
+        <div><h4 data-i18n="newsletter_title">Newsletter</h4><div class="newsletter"><input type="email" id="newsletterEmail" placeholder="Your email" /><button class="btn btn-primary" id="subscribeBtn" style="width:100%;margin-top:8px" data-i18n="subscribe_btn">Subscribe</button></div></div>
+      </div>
+      <div class="footer-bottom"><div class="muted">© <span id="year"></span> U Café</div></div>
+    </div>
+  </footer>
+  <script src="contact.js"></script>
+</body>
+</html>

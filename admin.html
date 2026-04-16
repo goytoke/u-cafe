@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin – U Café Orders</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; padding: 30px; background: #fbf3ea; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #b86e3c; color: white; }
+        tr:hover { background: #f9f1ea; }
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .paid { background: #28a74520; color: #28a745; }
+        .pending { background: #ffc10720; color: #ffc107; }
+    </style>
+</head>
+<body>
+    <h1>📋 U Café – Orders</h1>
+    <table id="orders-table">
+        <thead>
+            <tr><th>Tx Ref</th><th>Email</th><th>Amount (ETB)</th><th>Method</th><th>Status</th><th>Transaction ID</th><th>Date</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function fetchOrders() {
+            try {
+                const res = await fetch('http://localhost:3000/api/admin/orders');
+                const orders = await res.json();
+                const tbody = document.querySelector('#orders-table tbody');
+                tbody.innerHTML = '';
+                orders.forEach(order => {
+                    const row = tbody.insertRow();
+                    row.insertCell().innerText = order.tx_ref;
+                    row.insertCell().innerText = order.email;
+                    row.insertCell().innerText = order.amount;
+                    row.insertCell().innerText = order.userChoice || 'N/A';
+                    row.insertCell().innerHTML = `<span class="badge ${order.status}">${order.status}</span>`;
+                    row.insertCell().innerText = order.transactionId || '-';
+                    row.insertCell().innerText = new Date(order.createdAt).toLocaleString();
+                });
+            } catch (err) {
+                console.error('Failed to fetch orders', err);
+            }
+        }
+        fetchOrders();
+        setInterval(fetchOrders, 10000); // refresh every 10 seconds
+    </script>
+</body>
+</html>
