@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U online cafe service | Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --cream: #fbf3ea;
+            --soft-beige: #f4e7db;
+            --accent: #b86e3c;
+            --accent-2: #e7b58a;
+            --text-dark: #050505;
+            --muted: #6b6b6b;
+            --card: #fff;
+            --shadow: 0 10px 30px rgba(30,30,30,0.08);
+            --radius-lg: 28px;
+            --danger: #ef4444;
+            --success: #10b981;
+            --gradient-light: linear-gradient(180deg, var(--cream) 0%, #fff 60%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--gradient-light);
+            display: flex;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Animated dots (same as login.html) */
+        .dots {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .dot {
+            position: absolute;
+            background-color: rgba(184, 110, 60, 0.3);
+            border-radius: 50%;
+            will-change: transform;
+            bottom: -20px;
+            animation: floatUp 15s linear infinite;
+            opacity: 0;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) translateX(var(--x-movement)); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(calc(-100vh - 100px)) translateX(var(--x-movement)); opacity: 0; }
+        }
+        body.dark-mode .dot {
+            background-color: rgba(231, 181, 138, 0.4);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .signup-card {
+            background-color: var(--card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .signup-form {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .signup-info {
+            flex: 1;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            color: white;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--accent);
+            margin-bottom: 30px;
+            transition: color 0.3s;
+        }
+
+        .signup-header {
+            margin-bottom: 40px;
+        }
+
+        .signup-header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .signup-header p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid rgba(184, 110, 60, 0.18);
+            border-radius: 12px;
+            font-size: 13.5px;
+            transition: all 0.3s;
+            background-color: var(--card);
+        }
+
+        .form-control:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(184, 110, 60, 0.2);
+            outline: none;
+            background-color: white;
+        }
+
+        .form-control.invalid {
+            border-color: var(--danger);
+        }
+
+        .error-message {
+            color: var(--danger);
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 5px;
+        }
+
+        .name-fields .form-group {
+            flex: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 28px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent), #a95733);
+            color: white;
+            width: 100%;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #a95733, var(--accent));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 110, 60, 0.2);
+        }
+
+        .btn-google {
+            background-color: white;
+            color: #5f6368;
+            border: 2px solid rgba(184, 110, 60, 0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 12px;
+            border-radius: 28px;
+        }
+
+        .btn-google:hover {
+            background-color: var(--soft-beige);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-google svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: var(--muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid rgba(184, 110, 60, 0.18);
+            transition: border-color 0.3s;
+        }
+
+        .divider::before { margin-right: 15px; }
+        .divider::after { margin-left: 15px; }
+
+        .signup-footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--muted);
+            transition: color 0.3s;
+        }
+
+        .signup-footer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .signup-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .info-content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .info-content h3 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .info-content ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .info-content li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .signup-card {
+                flex-direction: column;
+            }
+            .signup-form, .signup-info {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .signup-form, .signup-info {
+                padding: 30px 20px;
+            }
+            .name-fields {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode .signup-card {
+            background-color: #1e1e1e;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        body.dark-mode .logo {
+            color: var(--accent-2);
+        }
+        body.dark-mode .signup-header h1 {
+            color: #e0e0e0;
+        }
+        body.dark-mode .signup-header p,
+        body.dark-mode .signup-footer,
+        body.dark-mode .divider {
+            color: #b0b0b0;
+        }
+        body.dark-mode .form-group label {
+            color: #e0e0e0;
+        }
+        body.dark-mode .form-control {
+            background-color: #2d2d2d;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        body.dark-mode .form-control:focus {
+            background-color: #333;
+            border-color: var(--accent-2);
+            box-shadow: 0 0 0 3px rgba(231, 181, 138, 0.2);
+        }
+        body.dark-mode .divider::before,
+        body.dark-mode .divider::after {
+            border-bottom-color: #444;
+        }
+        body.dark-mode .btn-google {
+            background-color: #2d2d2d;
+            border-color: #444;
+            color: #e0e0e0;
+        }
+        body.dark-mode .btn-google:hover {
+            background-color: #333;
+        }
+        body.dark-mode .signup-footer a {
+            color: var(--accent-2);
+        }
+
+        /* Hamburger menu and sidebar (same as login.html) */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+        body.dark-mode .mode-toggle {
+            background: var(--accent-2);
+        }
+        .mode-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .hamburger-menu {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            width: 30px;
+            height: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hamburger-menu span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--accent);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        body.dark-mode .hamburger-menu span {
+            background-color: var(--accent-2);
+        }
+        .hamburger-menu.active span:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu.active span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: var(--card);
+            box-shadow: var(--shadow);
+            z-index: 999;
+            transition: left 0.3s ease;
+            padding: 70px 20px 20px;
+        }
+        body.dark-mode .sidebar {
+            background-color: #1e1e1e;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+        .sidebar ul li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        body.dark-mode .sidebar ul li a {
+            color: #e0e0e0;
+        }
+        .sidebar ul li a:hover {
+            background-color: var(--soft-beige);
+            border-radius: 12px;
+            color: var(--text-dark);
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated dots -->
+    <div class="dots" id="dotsContainer"></div>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about1.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="signup-card">
+            <div class="signup-form">
+                <div class="logo">u kafiću online cafe service</div>
+
+                <div class="signup-header">
+                    <h1>Create Your Account</h1>
+                    <p>Join our cafe and enjoy ordering items! ❤️</p>
+                </div>
+
+                <button class="btn btn-google" id="googleSignup">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                    </svg>
+                    <span>Continue with Google</span>
+                </button>
+
+                <div class="divider">Or sign up with email</div>
+
+                <form id="signupForm">
+                    <div class="name-fields">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" class="form-control" 
+                                   placeholder="Enter your first name" 
+                                   minlength="2" maxlength="30" 
+                                   pattern="[A-Za-z]+" 
+                                   title="Only letters are allowed (2-30 characters)" 
+                                   required>
+                            <div class="error-message" id="firstNameError">Please enter a valid first name (letters only, 2-30 characters)</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" 
+                                   placeholder="Enter your last name" 
+                                   minlength="2" maxlength="30" 
+                                   pattern="[A-Za-z\-]+" 
+                                   title="Only letters and hyphens are allowed (2-30 characters)" 
+                                   required>
+                            <div class="error-message" id="lastNameError">Please enter a valid last name (letters and hyphens only, 2-30 characters)</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" 
+                               placeholder="+251-9XXXXXXXX" 
+                               pattern="\+251-9[0-9]{8}" 
+                               title="Format: +251-9 followed by 8 digits (e.g., +251-912345678)" 
+                               required>
+                        <div class="error-message" id="phoneError">Please enter a valid phone number (e.g., +251-912345678)</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Create a password (min 8 characters)" minlength="8" required>
+                        <div class="error-message" id="passwordError">Password must be at least 8 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" minlength="8" required>
+                        <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+                    </div>
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-primary">Get Started Free</button>
+                    </div>
+                </form>
+
+                <div class="signup-footer">
+                    Already have an account? <a href="login.html">Sign in</a>
+                </div>
+            </div>
+
+            <div class="signup-info">
+                <div class="info-content">
+                    <h2>The use of online cafe service</h2>
+                    <h3>1. Virtual Co-Working & Study Sessions</h3>
+                    <ul>
+                        <li>Join a live video call with others working remotely.</li>
+                        <li>Set productivity timers (like the Pomodoro technique) with café-style background music.</li>
+                        <li>Share goals and stay motivated in a group setting.</li>
+                    </ul>
+                    <h3>2. Online Coffee Tasting & Workshops</h3>
+                    <ul>
+                        <li>Attend live-streamed coffee brewing classes.</li>
+                        <li>Order specialty beans online and join guided tasting sessions.</li>
+                        <li>Learn latte art from baristas via video tutorials.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create animated dots (same as login.html)
+            function createDots() {
+                const dotsContainer = document.getElementById('dotsContainer');
+                const dotCount = 150;
+                for (let i = 0; i < dotCount; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    const size = Math.random() * 9 + 3;
+                    dot.style.width = `${size}px`;
+                    dot.style.height = `${size}px`;
+                    dot.style.left = `${Math.random() * 100}vw`;
+                    dot.style.bottom = '-20px';
+                    const xMovement = (Math.random() * 100 - 50);
+                    dot.style.setProperty('--x-movement', `${xMovement}px`);
+                    const duration = Math.random() * 10 + 10;
+                    dot.style.animationDuration = `${duration}s`;
+                    const delay = Math.random() * 15;
+                    dot.style.animationDelay = `${delay}s`;
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            createDots();
+
+            // Hamburger menu functionality
+            const hamburgerMenu = document.getElementById('hamburgerMenu');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            hamburgerMenu.addEventListener('click', function() {
+                this.classList.toggle('active');
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            overlay.addEventListener('click', function() {
+                this.classList.remove('active');
+                sidebar.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+            });
+
+            const signupForm = document.getElementById('signupForm');
+            const googleSignup = document.getElementById('googleSignup');
+            const modeToggle = document.getElementById('modeToggle');
+            const body = document.body;
+            
+            // Form elements
+            const firstNameInput = document.getElementById('firstName');
+            const lastNameInput = document.getElementById('lastName');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            
+            // Error messages
+            const firstNameError = document.getElementById('firstNameError');
+            const lastNameError = document.getElementById('lastNameError');
+            const emailError = document.getElementById('emailError');
+            const phoneError = document.getElementById('phoneError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+            
+            // Check for saved user preference or use system preference
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+                body.classList.add('dark-mode');
+                modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+            
+            // Mode toggle functionality
+            modeToggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                    modeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    modeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                }
+            });
+            
+            // Name validation functions
+            function validateName(input, errorElement, fieldName, allowHyphen = false) {
+                const pattern = allowHyphen ? /^[A-Za-z\-]+$/ : /^[A-Za-z]+$/;
+                const value = input.value.trim();
+                
+                if (!value) {
+                    errorElement.textContent = `${fieldName} is required`;
+                    input.classList.add('invalid');
+                    errorElement.style.display = 'block';
+                    return false;
+                }
+                
+                if (!pattern.test(value)) {
+                    errorElement.textContent = allowHyphen 
+                        ? `Only letters and hyphens are allowed in ${fieldName.toLowerCase()}`
+                        : `Only letters are allowed in ${fieldName.toLowerCase()}`;
+                    input.classList.add('invalid');
+                    errorElement.style.display = 'block';
+                    return false;
+                }
+                
+                if (value.length < 2 || value.length > 30) {
+                    errorElement.textContent = `${fieldName} must be between 2-30 characters`;
+                    input.classList.add('invalid');
+                    errorElement.style.display = 'block';
+                    return false;
+                }
+                
+                input.classList.remove('invalid');
+                errorElement.style.display = 'none';
+                return true;
+            }
+            
+            // Real-time validation
+            firstNameInput.addEventListener('input', function() {
+                validateName(firstNameInput, firstNameError, 'First name');
+            });
+            lastNameInput.addEventListener('input', function() {
+                validateName(lastNameInput, lastNameError, 'Last name', true);
+            });
+            emailInput.addEventListener('input', function() {
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!email) {
+                    emailError.textContent = 'Email is required';
+                    emailInput.classList.add('invalid');
+                    emailError.style.display = 'block';
+                } else if (!emailRegex.test(email)) {
+                    emailError.textContent = 'Please enter a valid email address';
+                    emailInput.classList.add('invalid');
+                    emailError.style.display = 'block';
+                } else {
+                    emailInput.classList.remove('invalid');
+                    emailError.style.display = 'none';
+                }
+            });
+            phoneInput.addEventListener('input', function() {
+                const phone = phoneInput.value.trim();
+                const phoneRegex = /^\+251-9[0-9]{8}$/;
+                if (!phone) {
+                    phoneError.textContent = 'Phone number is required';
+                    phoneInput.classList.add('invalid');
+                    phoneError.style.display = 'block';
+                } else if (!phoneRegex.test(phone)) {
+                    phoneError.textContent = 'Please enter a valid phone number (e.g., +251-912345678)';
+                    phoneInput.classList.add('invalid');
+                    phoneError.style.display = 'block';
+                } else {
+                    phoneInput.classList.remove('invalid');
+                    phoneError.style.display = 'none';
+                }
+            });
+            passwordInput.addEventListener('input', function() {
+                const password = passwordInput.value;
+                if (!password) {
+                    passwordError.textContent = 'Password is required';
+                    passwordInput.classList.add('invalid');
+                    passwordError.style.display = 'block';
+                } else if (password.length < 8) {
+                    passwordError.textContent = 'Password must be at least 8 characters';
+                    passwordInput.classList.add('invalid');
+                    passwordError.style.display = 'block';
+                } else {
+                    passwordInput.classList.remove('invalid');
+                    passwordError.style.display = 'none';
+                }
+            });
+            confirmPasswordInput.addEventListener('input', function() {
+                const password = passwordInput.value;
+                const confirmPassword = confirmPasswordInput.value;
+                if (!confirmPassword) {
+                    confirmPasswordError.textContent = 'Please confirm your password';
+                    confirmPasswordInput.classList.add('invalid');
+                    confirmPasswordError.style.display = 'block';
+                } else if (password !== confirmPassword) {
+                    confirmPasswordError.textContent = 'Passwords do not match';
+                    confirmPasswordInput.classList.add('invalid');
+                    confirmPasswordError.style.display = 'block';
+                } else {
+                    confirmPasswordInput.classList.remove('invalid');
+                    confirmPasswordError.style.display = 'none';
+                }
+            });
+            
+            // Form submission - store user data in localStorage
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                const isFirstNameValid = validateName(firstNameInput, firstNameError, 'First name');
+                const isLastNameValid = validateName(lastNameInput, lastNameError, 'Last name', true);
+                
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const isEmailValid = email && emailRegex.test(email);
+                
+                const phone = phoneInput.value.trim();
+                const phoneRegex = /^\+251-9[0-9]{8}$/;
+                const isPhoneValid = phone && phoneRegex.test(phone);
+                
+                const password = passwordInput.value;
+                const isPasswordValid = password && password.length >= 8;
+                
+                const confirmPassword = confirmPasswordInput.value;
+                const isConfirmPasswordValid = confirmPassword && password === confirmPassword;
+                
+                // Show error messages if invalid
+                if (!isFirstNameValid) {
+                    firstNameError.style.display = 'block';
+                    firstNameInput.classList.add('invalid');
+                }
+                if (!isLastNameValid) {
+                    lastNameError.style.display = 'block';
+                    lastNameInput.classList.add('invalid');
+                }
+                if (!isEmailValid) {
+                    emailError.style.display = 'block';
+                    emailInput.classList.add('invalid');
+                }
+                if (!isPhoneValid) {
+                    phoneError.style.display = 'block';
+                    phoneInput.classList.add('invalid');
+                }
+                if (!isPasswordValid) {
+                    passwordError.style.display = 'block';
+                    passwordInput.classList.add('invalid');
+                }
+                if (!isConfirmPasswordValid) {
+                    confirmPasswordError.style.display = 'block';
+                    confirmPasswordInput.classList.add('invalid');
+                }
+                
+                // If all valid, store user and redirect to login
+                if (isFirstNameValid && isLastNameValid && isEmailValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid) {
+                    // Create user object
+                    const newUser = {
+                        firstName: firstNameInput.value.trim(),
+                        lastName: lastNameInput.value.trim(),
+                        email: email,
+                        phone: phone,
+                        password: password,
+                        type: 'user',
+                        registeredAt: new Date().toISOString()
+                    };
+                    
+                    // Get existing users or initialize empty array
+                    let users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+                    // Check if email already exists
+                    if (users.some(u => u.email === newUser.email)) {
+                        alert('An account with this email already exists. Please log in instead.');
+                        return;
+                    }
+                    // Add new user
+                    users.push(newUser);
+                    localStorage.setItem('registeredUsers', JSON.stringify(users));
+                    
+                    console.log('Signup successful:', { email: newUser.email, name: newUser.firstName });
+                    alert('Account created successfully! Redirecting to login...');
+                    window.location.href = 'login.html?signup_success=true';
+                }
+            });
+            
+            // Google signup simulation
+            googleSignup.addEventListener('click', function() {
+                console.log('Google signup clicked');
+                alert('Google signup would be implemented here. Check console for details.');
+            });
+        });
+    </script>
+</body>
+</html>

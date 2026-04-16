@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Cafe - Our Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">        
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo and Login Icon -->
+        <div class="header-container">
+          <a href="index.html" class="brand">
+    <img src="u cafe 1 logo.png" alt="U Café logo">
+    <span>U Café</span>
+</a>
+            
+            <!-- Login Icon Container - UPDATED -->
+            <div class="header-login-container">
+                <button id="header-login-icon" title="Login to order">
+                    <i class="fas fa-user"></i>
+                    <span class="logged-in-check">
+                        <i class="fas fa-check"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+<!-- Hamburger Menu -->
+<div class="hamburger-menu" id="hamburgerMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- Sidebar Navigation (slides from left) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebarNav">
+    <div class="sidebar-header">
+        <span class="sidebar-logo">U Café</span>
+        <div class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></div>
+    </div>
+    <div class="sidebar-nav">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about1.html"><i class="fas fa-info-circle"></i> About</a>
+        <a href="menu.html" class="active"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="testimonials.html"><i class="fas fa-star"></i> Testimonials</a>
+        <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="login.html" class="signin-link"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+    </div>
+    <div class="sidebar-footer">
+        <p><i class="fas fa-coffee"></i> Ayer-Amba Student Project</p>
+        <p>Ethiopian tradition & digital fusion</p>
+    </div>
+</div>
+        <div class="section-title">
+            <h1>Our Menu</h1>
+            <p>Discover our delicious offerings crafted with care and the finest ingredients</p>
+        </div>
+
+        <!-- Menu Tabs - Updated Layout -->
+        <div class="menu-tabs-container">
+            <div class="all-items-tab">
+                <button class="menu-tab active" data-category="all">All Items</button>
+            </div>
+            <div class="category-tabs">
+                <button class="menu-tab" data-category="coffee">Coffee</button>
+                <button class="menu-tab" data-category="ethiopian-coffee">Ethiopian Coffee</button>
+                <button class="menu-tab" data-category="tea">Tea</button>
+                <button class="menu-tab" data-category="traditional">Traditional Menu</button>
+                <button class="menu-tab" data-category="injera">Injera Specials</button>
+                <button class="menu-tab" data-category="tibs">Tibs Varieties</button>
+                <button class="menu-tab" data-category="pastries">Pastries</button>
+                <button class="menu-tab" data-category="juices">Juices</button>
+                <button class="menu-tab" data-category="specialty">Specialty Drinks</button>
+                <button class="menu-tab" data-category="school">School Favorites</button>
+            </div>
+        </div>
+
+        <!-- Coffee Section (4 items) -->
+        <div class="category-section" id="coffee">
+            <h2 class="category-title">Coffee Selection</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="1" data-name="Espresso" data-price="3.50" data-category="coffee">
+                    <div class="menu-item-img">
+                        <img src="Espresso1.PNG" alt="Espresso">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Espresso</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="menu-item-desc">A strong, concentrated coffee served in a small cup. Perfect for those who appreciate the pure coffee flavor.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="2" data-name="Cappuccino" data-price="4.75" data-category="coffee">
+                    <div class="menu-item-img">
+                        <img src="Cappuccino1.PNG" alt="Cappuccino">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Cappuccino</h3>
+                            <span class="price">$4.75</span>
+                        </div>
+                        <p class="menu-item-desc">Espresso with equal parts steamed milk and foam, creating a creamy and satisfying coffee experience.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="3" data-name="Caramel Macchiato" data-price="5.25" data-category="coffee">
+                    <div class="special-badge">Customer Favorite</div>
+                    <div class="menu-item-img">
+                        <img src="Caramel Macchiato1.png" alt="Caramel Macchiato">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Caramel Macchiato</h3>
+                            <span class="price">$5.25</span>
+                        </div>
+                        <p class="menu-item-desc">Espresso with vanilla-flavored syrup, steamed milk, and caramel drizzle. A sweet and creamy delight.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="4" data-name="Iced Latte" data-price="4.50" data-category="coffee">
+                    <div class="menu-item-img">
+                        <img src="Iced Latte1.PNG" alt="Iced Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Iced Latte</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="menu-item-desc">Espresso chilled with ice and mixed with cold milk. Refreshing and smooth for warm days.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethiopian Coffee Section (8 items = 2 rows of 4) -->
+        <div class="category-section" id="ethiopian-coffee">
+            <h2 class="category-title">Ethiopian Coffee</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="26" data-name="Traditional Coffee Ceremony" data-price="15.99" data-category="ethiopian-coffee">
+                    <div class="special-badge">Experience</div>
+                    <div class="menu-item-img">
+                        <img src="Coffee Ceremony1.PNG" alt="Coffee Ceremony">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Coffee Ceremony</h3>
+                            <span class="price">$15.99</span>
+                        </div>
+                        <p class="menu-item-desc">Authentic Ethiopian coffee ceremony with freshly roasted beans and traditional serving.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="27" data-name="Yirgacheffe" data-price="5.50" data-category="ethiopian-coffee">
+                    <div class="menu-item-img">
+                        <img src="Yirgacheffe1.PNG" alt="Yirgacheffe">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Yirgacheffe</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-desc">Floral and citrusy single-origin coffee from Ethiopia's famous Yirgacheffe region.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="28" data-name="Sidamo" data-price="5.50" data-category="ethiopian-coffee">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Sidamo">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Sidamo</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-desc">Full-bodied coffee with wine-like characteristics and bright acidity.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="29" data-name="Harrar" data-price="5.75" data-category="ethiopian-coffee">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Harrar">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Harrar</h3>
+                            <span class="price">$5.75</span>
+                        </div>
+                        <p class="menu-item-desc">Dry-processed coffee with bold blueberry notes and complex flavors.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="menu-item" data-id="30" data-name="Buna with Popcorn" data-price="6.99" data-category="ethiopian-coffee">
+                    <div class="special-badge">Traditional</div>
+                    <div class="menu-item-img">
+                        <img src="Buna with Popcorn1.PNG" alt="Buna with Popcorn">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Buna with Popcorn</h3>
+                            <span class="price">$6.99</span>
+                        </div>
+                        <p class="menu-item-desc">Traditional Ethiopian coffee served with freshly popped popcorn.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="menu-item" data-id="31" data-name="Kurimi" data-price="5.25" data-category="ethiopian-coffee">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Kurimi">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Kurimi</h3>
+                            <span class="price">$5.25</span>
+                        </div>
+                        <p class="menu-item-desc">Ethiopian coffee with a hint of cardamom and cinnamon spices.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 7 -->
+                <div class="menu-item" data-id="32" data-name="Metad Special" data-price="6.50" data-category="ethiopian-coffee">
+                    <div class="special-badge">Premium</div>
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Metad Special">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Metad Special</h3>
+                            <span class="price">$6.50</span>
+                        </div>
+                        <p class="menu-item-desc">Premium Ethiopian coffee blend with rich chocolate notes.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 8 -->
+                <div class="menu-item" data-id="33" data-name="Agaro Forest" data-price="5.75" data-category="ethiopian-coffee">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Agaro Forest">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Agaro Forest</h3>
+                            <span class="price">$5.75</span>
+                        </div>
+                        <p class="menu-item-desc">Single-origin coffee from the Agaro forest region with floral notes.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tea Section -->
+        <div class="category-section" id="tea">
+            <h2 class="category-title">Tea Selection</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="5" data-name="Green Tea" data-price="3.25" data-category="tea">
+                    <div class="menu-item-img">
+                        <img src="Green Tea1.PNG" alt="Green Tea">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Green Tea</h3>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <p class="menu-item-desc">Premium green tea leaves steeped to perfection.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="6" data-name="Chai Latte" data-price="4.25" data-category="tea">
+                    <div class="menu-item-img">
+                        <img src="Chai Latte1.PNG" alt="Chai Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Chai Latte</h3>
+                            <span class="price">$4.25</span>
+                        </div>
+                        <p class="menu-item-desc">Spiced black tea with steamed milk and honey.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="7" data-name="Earl Grey" data-price="3.50" data-category="tea">
+                    <div class="menu-item-img">
+                        <img src="Earl Grey1.PNG" alt="Earl Grey">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Earl Grey</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="menu-item-desc">Classic black tea flavored with bergamot oil.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="8" data-name="Iced Peach Tea" data-price="4.00" data-category="tea">
+                    <div class="special-badge">Seasonal</div>
+                    <div class="menu-item-img">
+                        <img src="Iced Peach Tea1.PNG" alt="Iced Peach Tea">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Iced Peach Tea</h3>
+                            <span class="price">$4.00</span>
+                        </div>
+                        <p class="menu-item-desc">Refreshing black tea infused with natural peach flavor.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traditional Menu Section -->
+        <div class="category-section" id="traditional">
+            <h2 class="category-title">Traditional Menu</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="21" data-name="Doro Wat" data-price="12.99" data-category="traditional">
+                    <div class="menu-item-img">
+                        <img src="Doro Wat1.PNG" alt="Doro Wat">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Doro Wat</h3>
+                            <span class="price">$12.99</span>
+                        </div>
+                        <p class="menu-item-desc">Spicy chicken stew with berbere spice.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="22" data-name="Kitfo" data-price="14.50" data-category="traditional">
+                    <div class="special-badge">Popular</div>
+                    <div class="menu-item-img">
+                        <img src="Kitfo1.PNG" alt="Kitfo">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Kitfo</h3>
+                            <span class="price">$14.50</span>
+                        </div>
+                        <p class="menu-item-desc">Minced beef seasoned with mitmita.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="23" data-name="Shiro Wat" data-price="10.99" data-category="traditional">
+                    <div class="menu-item-img">
+                        <img src="Shiro Wat1.PNG" alt="Shiro Wat">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Shiro Wat</h3>
+                            <span class="price">$10.99</span>
+                        </div>
+                        <p class="menu-item-desc">Flavorful chickpea stew cooked with berbere.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="24" data-name="Tibs" data-price="13.99" data-category="traditional">
+                    <div class="menu-item-img">
+                        <img src="Tibs1.PNG" alt="Tibs">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Tibs</h3>
+                            <span class="price">$13.99</span>
+                        </div>
+                        <p class="menu-item-desc">Sautéed beef or lamb with onions and peppers.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Injera Specials Section -->
+        <div class="category-section" id="injera">
+            <h2 class="category-title">Injera Specials</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="31" data-name="Vegetarian Combo" data-price="14.99" data-category="injera">
+                    <div class="special-badge">Best Seller</div>
+                    <div class="menu-item-img">
+                        <img src="Vegetarian Combo1.PNG" alt="Vegetarian Combo">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Vegetarian Combo</h3>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <p class="menu-item-desc">Selection of 5 vegetarian dishes.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="32" data-name="Meat Combo" data-price="17.99" data-category="injera">
+                    <div class="menu-item-img">
+                        <img src="Meat Combo1.PNG" alt="Meat Combo">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Meat Combo</h3>
+                            <span class="price">$17.99</span>
+                        </div>
+                        <p class="menu-item-desc">Selection of 4 meat dishes and 2 sides.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="33" data-name="Fasting Food Combo" data-price="13.99" data-category="injera">
+                    <div class="special-badge">Lenten Special</div>
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Fasting Food">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Fasting Food Combo</h3>
+                            <span class="price">$13.99</span>
+                        </div>
+                        <p class="menu-item-desc">Selection of vegan dishes for fasting periods.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="34" data-name="Injera with Tibs" data-price="15.50" data-category="injera">
+                    <div class="menu-item-img">
+                        <img src="Injera with Tibs1.PNG" alt="Injera with Tibs">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Injera with Tibs</h3>
+                            <span class="price">$15.50</span>
+                        </div>
+                        <p class="menu-item-desc">Fresh injera with your choice of tibs.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tibs Varieties Section -->
+        <div class="category-section" id="tibs">
+            <h2 class="category-title">Tibs Varieties</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="36" data-name="Beef Tibs" data-price="15.99" data-category="tibs">
+                    <div class="menu-item-img">
+                        <img src="Beef Tibs1.PNG" alt="Beef Tibs">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Beef Tibs</h3>
+                            <span class="price">$15.99</span>
+                        </div>
+                        <p class="menu-item-desc">Tender beef cubes sautéed with onions.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="37" data-name="Lamb Tibs" data-price="17.50" data-category="tibs">
+                    <div class="special-badge">Chef's Choice</div>
+                    <div class="menu-item-img">
+                        <img src="Lamb Tibs1.PNG" alt="Lamb Tibs">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Lamb Tibs</h3>
+                            <span class="price">$17.50</span>
+                        </div>
+                        <p class="menu-item-desc">Juicy lamb pieces with Ethiopian spices.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="38" data-name="Chicken Tibs" data-price="14.99" data-category="tibs">
+                    <div class="menu-item-img">
+                        <img src="Chicken Tibs1.PNG" alt="Chicken Tibs">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Chicken Tibs</h3>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <p class="menu-item-desc">Tender chicken pieces with berbere spice.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="39" data-name="Awaze Tibs" data-price="16.50" data-category="tibs">
+                    <div class="menu-item-img">
+                        <img src="Awaze Tibs1.PNG" alt="Awaze Tibs">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Awaze Tibs</h3>
+                            <span class="price">$16.50</span>
+                        </div>
+                        <p class="menu-item-desc">Spicy beef tibs marinated in awaze sauce.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pastries Section -->
+        <div class="category-section" id="pastries">
+            <h2 class="category-title">Fresh Pastries</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="9" data-name="Croissant" data-price="3.25" data-category="pastries">
+                    <div class="menu-item-img">
+                        <img src="Butter Croissant.png" alt="Croissant">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Butter Croissant</h3>
+                            <span class="price">$3.25</span>
+                        </div>
+                        <p class="menu-item-desc">Classic French croissant with layers of buttery pastry.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="10" data-name="Chocolate Croissant" data-price="3.75" data-category="pastries">
+                    <div class="menu-item-img">
+                        <img src="Chocolate Croissant.png" alt="Chocolate Croissant">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Chocolate Croissant</h3>
+                            <span class="price">$3.75</span>
+                        </div>
+                        <p class="menu-item-desc">Our buttery croissant filled with rich, melted chocolate.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="11" data-name="Blueberry Muffin" data-price="3.50" data-category="pastries">
+                    <div class="special-badge">Fresh Daily</div>
+                    <div class="menu-item-img">
+                        <img src="Blueberry Muffin.png" alt="Blueberry Muffin">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Blueberry Muffin</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="menu-item-desc">Moist muffin packed with juicy blueberries.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="12" data-name="Cinnamon Roll" data-price="4.25" data-category="pastries">
+                    <div class="menu-item-img">
+                        <img src="Cinnamon Roll.png" alt="Cinnamon Roll">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Cinnamon Roll</h3>
+                            <span class="price">$4.25</span>
+                        </div>
+                        <p class="menu-item-desc">Soft pastry swirled with cinnamon sugar.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Juices Section -->
+        <div class="category-section" id="juices">
+            <h2 class="category-title">Fresh Juices</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="13" data-name="Orange Juice" data-price="4.50" data-category="juices">
+                    <div class="menu-item-img">
+                        <img src="Fresh Orange Juice1.PNG" alt="Orange Juice">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Fresh Orange Juice</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="menu-item-desc">Freshly squeezed orange juice packed with vitamin C.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="14" data-name="Green Detox" data-price="5.50" data-category="juices">
+                    <div class="special-badge">Healthy Choice</div>
+                    <div class="menu-item-img">
+                        <img src="Green Detox1.PNG" alt="Green Detox Juice">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Green Detox</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-desc">Kale, spinach, cucumber, green apple, and lemon.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="15" data-name="Berry Blast" data-price="5.25" data-category="juices">
+                    <div class="menu-item-img">
+                        <img src="Berry Blast1.PNG" alt="Berry Blast">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Berry Blast</h3>
+                            <span class="price">$5.25</span>
+                        </div>
+                        <p class="menu-item-desc">A mix of strawberries, blueberries, raspberries.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="16" data-name="Tropical Sunrise" data-price="5.75" data-category="juices">
+                    <div class="menu-item-img">
+                        <img src="Tropical Sunrise1.PNG" alt="Tropical Sunrise">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Tropical Sunrise</h3>
+                            <span class="price">$5.75</span>
+                        </div>
+                        <p class="menu-item-desc">Pineapple, mango, and orange with a hint of ginger.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialty Drinks Section -->
+        <div class="category-section" id="specialty">
+            <h2 class="category-title">Specialty Drinks</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="17" data-name="Matcha Latte" data-price="5.25" data-category="specialty">
+                    <div class="menu-item-img">
+                        <img src="Matcha Latte.png" alt="Matcha Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Matcha Latte</h3>
+                            <span class="price">$5.25</span>
+                        </div>
+                        <p class="menu-item-desc">Premium ceremonial-grade matcha with steamed milk.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="18" data-name="Turmeric Golden Milk" data-price="5.50" data-category="specialty">
+                    <div class="special-badge">Immunity Boost</div>
+                    <div class="menu-item-img">
+                        <img src="Golden Milk.png" alt="Turmeric Golden Milk">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Golden Milk</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-desc">Turmeric, ginger, cinnamon blended with warm milk.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="19" data-name="Iced Lavender Latte" data-price="5.75" data-category="specialty">
+                    <div class="menu-item-img">
+                        <img src="Iced Lavender Latte.png" alt="Iced Lavender Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Iced Lavender Latte</h3>
+                            <span class="price">$5.75</span>
+                        </div>
+                        <p class="menu-item-desc">Espresso with lavender syrup and cold milk.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="20" data-name="Dalgona Coffee" data-price="5.50" data-category="specialty">
+                    <div class="menu-item-img">
+                        <img src="Dalgona Coffee.png" alt="Dalgona Coffee">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Dalgona Coffee</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="menu-item-desc">Whipped coffee topping served over cold milk.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Favorites Section -->
+        <div class="category-section" id="school">
+            <h2 class="category-title">School Favorites</h2>
+            <div class="menu-items">
+                <!-- Item 1 -->
+                <div class="menu-item" data-id="45" data-name="Chornake/Pasti" data-price="7.50" data-category="school">
+                    <div class="menu-item-img">
+                        <img src="ጮርናቄ አሰራርፖስቲ አሰራር Pasti 1.PNG" alt="Chornake/Pasti">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>ጮርናቄ/ፖስቲ/Pasti</h3>
+                            <span class="price">$7.50</span>
+                        </div>
+                        <p class="menu-item-desc">Flaky layered bread served with honey.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item" data-id="47" data-name="Sambusa" data-price="7.50" data-category="school">
+                    <div class="menu-item-img">
+                        <img src="Sambusa1.PNG" alt="Sambusa">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Sambusa</h3>
+                            <span class="price">$7.50</span>
+                        </div>
+                        <p class="menu-item-desc">Flaky layered bread served with honey.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item" data-id="46" data-name="Moya" data-price="7.50" data-category="school">
+                    <div class="menu-item-img">
+                        <img src="Moya1.PNG" alt="Moya">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Moya</h3>
+                            <span class="price">$7.50</span>
+                        </div>
+                        <p class="menu-item-desc">Flaky layered bread served with honey.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="menu-item" data-id="43" data-name="Dabo Kolo" data-price="5.99" data-category="school">
+                    <div class="menu-item-img">
+                        <img src="Dabo Kolo1.PNG" alt="Kolo">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Dabo Kolo</h3>
+                            <span class="price">$5.99</span>
+                        </div>
+                        <p class="menu-item-desc">Roasted barley snack, perfect with coffee.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="menu-item" data-id="44" data-name="Fatira" data-price="7.50" data-category="school">
+                    <div class="menu-item-img">
+                        <img src="Fatira1.PNG" alt="Fatira">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Fatira</h3>
+                            <span class="price">$7.50</span>
+                        </div>
+                        <p class="menu-item-desc">Flaky layered bread served with honey.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="menu-item" data-id="41" data-name="Ful" data-price="8.99" data-category="school">
+                    <div class="menu-item-img">
+                        <img src="Ful1.PNG" alt="Ful">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Ful</h3>
+                            <span class="price">$8.99</span>
+                        </div>
+                        <p class="menu-item-desc">Mashed fava beans with onions and jalapeños.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 7 -->
+                <div class="menu-item" data-id="42" data-name="Chechebsa" data-price="9.50" data-category="school">
+                    <div class="special-badge">Breakfast</div>
+                    <div class="menu-item-img">
+                        <img src="Chechebsa1.PNG" alt="Chechebsa">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-title">
+                            <h3>Chechebsa</h3>
+                            <span class="price">$9.50</span>
+                        </div>
+                        <p class="menu-item-desc">Spiced fried bread with berbere and honey.</p>
+                        <div class="add-to-cart">
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="text" class="quantity-input" value="1" readonly>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-btn"><i class="fas fa-cart-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <p>Add some delicious items!</p>
+                </div>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn"><i class="fas fa-credit-card"></i> Checkout</button>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Cart Toggle Button -->
+        <div class="cart-toggle">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+        <!-- Cart Notification -->
+        <div class="cart-notification">
+            <i class="fas fa-check-circle"></i>
+            <span>Item added to cart!</span>
+        </div>
+    </div>
+
+    <!-- Checkout Page -->
+    <div class="checkout-page" id="checkout-page">
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <button class="back-to-cart">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="back-text">Back</span>
+                </button>
+                <h2>Pay U Cafe</h2>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Your Order Summary</h3>
+                <div class="order-items" id="order-items">
+                    <!-- Items will be populated by JavaScript -->
+                </div>
+                
+                <div class="order-totals">
+                    <div class="order-row">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$0.00</span>
+                    </div>
+                    <div class="order-row">
+                        <span>Service Fee</span>
+                        <span>$1.50</span>
+                    </div>
+                    <div class="order-row">
+                        <span>Tax</span>
+                        <span class="tax">$0.00</span>
+                    </div>
+                    <div class="order-row total">
+                        <span>Total due</span>
+                        <span class="total-price">$0.00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="customer-info">
+                <h3>Customer Information</h3>
+                <form class="checkout-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="(201) 555-0123" required>
+                    </div>
+                    
+                    <h3>Delivery Address</h3>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address1">Address Line 1</label>
+                        <input type="text" id="address1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address2">Address Line 2 (Optional)</label>
+                        <input type="text" id="address2">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP Code</label>
+                            <input type="text" id="zip" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <div class="custom-select">
+                            <select id="country" name="country" required>
+                                <option value="" disabled selected>Select your country</option>
+                                <option value="US" data-flag="us">United States</option>
+                                <option value="ET" data-flag="et">Ethiopia</option>
+                                <option value="GB" data-flag="gb">United Kingdom</option>
+                                <option value="CA" data-flag="ca">Canada</option>
+                                <option value="AU" data-flag="au">Australia</option>
+                            </select>
+                            <div class="selected-option">
+                                <span class="flag-icon"><img src="" alt="" width="20" class="flag-img"></span>
+                                <span class="country-name">Select country</span>
+                                <span class="arrow">▼</span>
+                            </div>
+                            <div class="options"></div>
+                        </div>
+                    </div>
+                    
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method active" data-method="card">
+                            <i class="far fa-credit-card"></i>
+                            <span>Credit/Debit Card</span>
+                        </div>
+                        <div class="payment-method" data-method="bank">
+                            <i class="fas fa-university"></i>
+                            <span>Bank Transfer</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-info" id="card-info">
+                        <div class="form-group">
+                            <label for="card-number">Card Information</label>
+                            <input type="text" id="card-number" placeholder="1234 1234 1234 1234" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvc">CVC</label>
+                                <input type="text" id="cvc" placeholder="CVC" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="save-info">
+                        <label for="save-info">Save my information for faster checkout</label>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-order">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER - Updated to match index16.html -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="u cafe 1 logo.png" alt="U Café logo">
+                    <h4>U Café</h4>
+                    <p>Born at Ayer-Amba Secondary School, combining Ethiopian tradition with digital innovation.</p>
+                    <div style="margin-top: 12px">
+                        <a class="muted" href="https://facebook.com" target="_blank"><i class="fab fa-facebook" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://instagram.com" target="_blank"><i class="fab fa-instagram" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://twitter.com" target="_blank"><i class="fab fa-twitter" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok" style="margin-right: 8px"></i></a>
+                        <a class="muted" href="https://youtube.com" target="_blank"><i class="fab fa-youtube" style="margin-right: 8px"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about1.html">About us</a></p>
+                    <p><a href="menu.html">Our Menu</a></p>
+                    <p><a href="testimonials.html">Testimonials</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div>
+                    <h4>Traditional Menu</h4>
+                    <p><a href="#">Ethiopian Coffee</a></p>
+                    <p><a href="#">Injera Specials</a></p>
+                    <p><a href="#">Tibs Varieties</a></p>
+                    <p><a href="#">School Favorites</a></p>
+                    <p><a href="#">Seasonal Dishes</a></p>
+                </div>
+                <div>
+                    <h4>Student Newsletter</h4>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email" />
+                        <button class="btn btn-primary" style="width:100%;margin-top:8px">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="muted">© <span id="year"></span> U Online Cafe • A student initiative from Ayer-Amba Secondary School</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
+
+
