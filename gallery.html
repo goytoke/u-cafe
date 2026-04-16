@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>U Cafe - Gallery & Preparation Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <!-- Hamburger Menu - fixed top-left, completely separate from header -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="container">
+        <!-- Header container - untouched, logo only (original layout) -->
+        <div class="header-container">
+            <a href="index.html" class="brand">
+                <img src="u cafe 1 logo.png" alt="U Café logo">
+                <span>U Café</span>
+            </a>
+        </div>
+
+        <!-- Section Title -->
+        <div class="section-title">
+            <h1>Our Gallery</h1>
+            <p>Explore every item on our menu with detailed ingredients, preparation videos, and nutritional information</p>
+        </div>
+
+        <!-- Search + filters -->
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search menu items, ingredients, or categories...">
+        </div>
+        <div class="gallery-tabs-container">
+            <button class="gallery-tab active" data-filter="all">All Items</button>
+            <button class="gallery-tab" data-filter="coffee">Coffee</button>
+            <button class="gallery-tab" data-filter="ethiopian-coffee">Ethiopian Coffee</button>
+            <button class="gallery-tab" data-filter="tea">Tea</button>
+            <button class="gallery-tab" data-filter="traditional">Traditional</button>
+            <button class="gallery-tab" data-filter="injera">Injera Specials</button>
+            <button class="gallery-tab" data-filter="tibs">Tibs</button>
+            <button class="gallery-tab" data-filter="pastries">Pastries</button>
+            <button class="gallery-tab" data-filter="juices">Fresh Juices</button>
+            <button class="gallery-tab" data-filter="specialty">Specialty Drinks</button>
+            <button class="gallery-tab" data-filter="school">School Favorites</button>
+        </div>
+
+        <!-- Gallery Grid - FULL original menu items (all 47+ items) -->
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- All items from original gallery.html are inserted here (same as before) -->
+            <!-- (The complete list of 47+ items is identical to the original gallery.html – kept for brevity) -->
+              <!-- ========== COFFEE ITEMS ========== -->
+    <!-- ========== ESPRESSO ========== -->
+    <div class="gallery-item" data-category="coffee" data-name="espresso" data-ingredients="ethiopian yirgacheffe beans filtered water golden crema">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 1, &quot;name&quot;: &quot;Espresso&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$3.50&quot;, &quot;image&quot;: &quot;Espresso1.PNG&quot;, &quot;short_desc&quot;: &quot;A strong, concentrated coffee served in a small cup. Perfect for those who appreciate the pure coffee flavor.&quot;, &quot;ingredients&quot;: [&quot;Ethiopian Yirgacheffe beans&quot;, &quot;Filtered water&quot;, &quot;Golden crema&quot;], &quot;video_id&quot;: &quot;SSE-3sPJsOM&quot;, &quot;video_title&quot;: &quot;How to Make Perfect Espresso&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Coffee</span>
+            <span class="price-tag">$3.50</span>
+            <img src="Espresso1.PNG" alt="Espresso" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('SSE-3sPJsOM', 'How to Make Perfect Espresso')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Espresso</h3>
+            <p class="short-desc">A strong, concentrated coffee served in a small cup. Perfect for those who appreciate the pure coffee flavor.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Ethiopian Yirgacheffe beans</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                    <li class="ingredient-tag">Golden crema</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('SSE-3sPJsOM', 'How to Make Perfect Espresso')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 1, &quot;name&quot;: &quot;Espresso&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$3.50&quot;, &quot;image&quot;: &quot;Espresso1.PNG&quot;, &quot;short_desc&quot;: &quot;A strong, concentrated coffee served in a small cup. Perfect for those who appreciate the pure coffee flavor.&quot;, &quot;ingredients&quot;: [&quot;Ethiopian Yirgacheffe beans&quot;, &quot;Filtered water&quot;, &quot;Golden crema&quot;], &quot;video_id&quot;: &quot;SSE-3sPJsOM&quot;, &quot;video_title&quot;: &quot;How to Make Perfect Espresso&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CAPPUCCINO ========== -->
+    <div class="gallery-item" data-category="coffee" data-name="cappuccino" data-ingredients="double espresso shot whole milk microfoam cocoa powder (optional)">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 2, &quot;name&quot;: &quot;Cappuccino&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$4.75&quot;, &quot;image&quot;: &quot;Cappuccino1.PNG&quot;, &quot;short_desc&quot;: &quot;Espresso with equal parts steamed milk and foam, creating a creamy and satisfying coffee experience.&quot;, &quot;ingredients&quot;: [&quot;Double espresso shot&quot;, &quot;Whole milk&quot;, &quot;Microfoam&quot;, &quot;Cocoa powder (optional)&quot;], &quot;video_id&quot;: &quot;2Ao5b6uqI40&quot;, &quot;video_title&quot;: &quot;Cappuccino Making Tutorial&quot;, &quot;calories&quot;: 120, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;10g&quot;, &quot;fat&quot;: &quot;6g&quot;})">
+            <span class="category-badge">Coffee</span>
+            <span class="price-tag">$4.75</span>
+            <img src="Cappuccino1.PNG" alt="Cappuccino" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('2Ao5b6uqI40', 'Cappuccino Making Tutorial')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Cappuccino</h3>
+            <p class="short-desc">Espresso with equal parts steamed milk and foam, creating a creamy and satisfying coffee experience.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Double espresso shot</li>
+                    <li class="ingredient-tag">Whole milk</li>
+                    <li class="ingredient-tag">Microfoam</li>
+                    <li class="ingredient-tag">Cocoa powder (optional)</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('2Ao5b6uqI40', 'Cappuccino Making Tutorial')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 2, &quot;name&quot;: &quot;Cappuccino&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$4.75&quot;, &quot;image&quot;: &quot;Cappuccino1.PNG&quot;, &quot;short_desc&quot;: &quot;Espresso with equal parts steamed milk and foam, creating a creamy and satisfying coffee experience.&quot;, &quot;ingredients&quot;: [&quot;Double espresso shot&quot;, &quot;Whole milk&quot;, &quot;Microfoam&quot;, &quot;Cocoa powder (optional)&quot;], &quot;video_id&quot;: &quot;2Ao5b6uqI40&quot;, &quot;video_title&quot;: &quot;Cappuccino Making Tutorial&quot;, &quot;calories&quot;: 120, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;10g&quot;, &quot;fat&quot;: &quot;6g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CARAMEL MACCHIATO ========== -->
+    <div class="gallery-item" data-category="coffee" data-name="caramel macchiato" data-ingredients="espresso vanilla syrup steamed milk caramel sauce sea salt">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 3, &quot;name&quot;: &quot;Caramel Macchiato&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;Caramel Macchiato1.png&quot;, &quot;short_desc&quot;: &quot;Espresso with vanilla-flavored syrup, steamed milk, and caramel drizzle. A sweet and creamy delight.&quot;, &quot;ingredients&quot;: [&quot;Espresso&quot;, &quot;Vanilla syrup&quot;, &quot;Steamed milk&quot;, &quot;Caramel sauce&quot;, &quot;Sea salt&quot;], &quot;video_id&quot;: &quot;Zmo-Qp9zVSs&quot;, &quot;video_title&quot;: &quot;Caramel Macchiato Recipe&quot;, &quot;calories&quot;: 250, &quot;protein&quot;: &quot;8g&quot;, &quot;carbs&quot;: &quot;35g&quot;, &quot;fat&quot;: &quot;9g&quot;})">
+            <span class="category-badge">Coffee</span>
+            <span class="price-tag">$5.25</span>
+            <img src="Caramel Macchiato1.png" alt="Caramel Macchiato" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('Zmo-Qp9zVSs', 'Caramel Macchiato Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Caramel Macchiato</h3>
+            <p class="short-desc">Espresso with vanilla-flavored syrup, steamed milk, and caramel drizzle. A sweet and creamy delight.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Espresso</li>
+                    <li class="ingredient-tag">Vanilla syrup</li>
+                    <li class="ingredient-tag">Steamed milk</li>
+                    <li class="ingredient-tag">Caramel sauce</li>
+                    <li class="ingredient-tag">Sea salt</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('Zmo-Qp9zVSs', 'Caramel Macchiato Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 3, &quot;name&quot;: &quot;Caramel Macchiato&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;Caramel Macchiato1.png&quot;, &quot;short_desc&quot;: &quot;Espresso with vanilla-flavored syrup, steamed milk, and caramel drizzle. A sweet and creamy delight.&quot;, &quot;ingredients&quot;: [&quot;Espresso&quot;, &quot;Vanilla syrup&quot;, &quot;Steamed milk&quot;, &quot;Caramel sauce&quot;, &quot;Sea salt&quot;], &quot;video_id&quot;: &quot;Zmo-Qp9zVSs&quot;, &quot;video_title&quot;: &quot;Caramel Macchiato Recipe&quot;, &quot;calories&quot;: 250, &quot;protein&quot;: &quot;8g&quot;, &quot;carbs&quot;: &quot;35g&quot;, &quot;fat&quot;: &quot;9g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ICED LATTE ========== -->
+    <div class="gallery-item" data-category="coffee" data-name="iced latte" data-ingredients="double espresso cold milk ice cubes optional vanilla syrup">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 4, &quot;name&quot;: &quot;Iced Latte&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$4.50&quot;, &quot;image&quot;: &quot;Iced Latte1.PNG&quot;, &quot;short_desc&quot;: &quot;Espresso chilled with ice and mixed with cold milk. Refreshing and smooth for warm days.&quot;, &quot;ingredients&quot;: [&quot;Double espresso&quot;, &quot;Cold milk&quot;, &quot;Ice cubes&quot;, &quot;Optional vanilla syrup&quot;], &quot;video_id&quot;: &quot;Vsb5sHIUP7g&quot;, &quot;video_title&quot;: &quot;Iced Latte Preparation&quot;, &quot;calories&quot;: 110, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;9g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+            <span class="category-badge">Coffee</span>
+            <span class="price-tag">$4.50</span>
+            <img src="Iced Latte1.PNG" alt="Iced Latte" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('Vsb5sHIUP7g', 'Iced Latte Preparation')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Iced Latte</h3>
+            <p class="short-desc">Espresso chilled with ice and mixed with cold milk. Refreshing and smooth for warm days.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Double espresso</li>
+                    <li class="ingredient-tag">Cold milk</li>
+                    <li class="ingredient-tag">Ice cubes</li>
+                    <li class="ingredient-tag">Optional vanilla syrup</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('Vsb5sHIUP7g', 'Iced Latte Preparation')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 4, &quot;name&quot;: &quot;Iced Latte&quot;, &quot;category&quot;: &quot;coffee&quot;, &quot;price&quot;: &quot;$4.50&quot;, &quot;image&quot;: &quot;Iced Latte1.PNG&quot;, &quot;short_desc&quot;: &quot;Espresso chilled with ice and mixed with cold milk. Refreshing and smooth for warm days.&quot;, &quot;ingredients&quot;: [&quot;Double espresso&quot;, &quot;Cold milk&quot;, &quot;Ice cubes&quot;, &quot;Optional vanilla syrup&quot;], &quot;video_id&quot;: &quot;Vsb5sHIUP7g&quot;, &quot;video_title&quot;: &quot;Iced Latte Preparation&quot;, &quot;calories&quot;: 110, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;9g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TEA ITEMS ========== -->
+    <!-- ========== GREEN TEA ========== -->
+    <div class="gallery-item" data-category="tea" data-name="green tea" data-ingredients="green tea leaves filtered water (80°c) optional lemon">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 5, &quot;name&quot;: &quot;Green Tea&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$3.25&quot;, &quot;image&quot;: &quot;Green Tea1.PNG&quot;, &quot;short_desc&quot;: &quot;Premium green tea leaves steeped to perfection.&quot;, &quot;ingredients&quot;: [&quot;Green tea leaves&quot;, &quot;Filtered water (80°C)&quot;, &quot;Optional lemon&quot;], &quot;video_id&quot;: &quot;N4vKMZT2gog&quot;, &quot;video_title&quot;: &quot;How to Brew Green Tea&quot;, &quot;calories&quot;: 2, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;0g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Tea</span>
+            <span class="price-tag">$3.25</span>
+            <img src="Green Tea1.PNG" alt="Green Tea" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('N4vKMZT2gog', 'How to Brew Green Tea')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Green Tea</h3>
+            <p class="short-desc">Premium green tea leaves steeped to perfection.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Green tea leaves</li>
+                    <li class="ingredient-tag">Filtered water (80°C)</li>
+                    <li class="ingredient-tag">Optional lemon</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('N4vKMZT2gog', 'How to Brew Green Tea')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 5, &quot;name&quot;: &quot;Green Tea&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$3.25&quot;, &quot;image&quot;: &quot;Green Tea1.PNG&quot;, &quot;short_desc&quot;: &quot;Premium green tea leaves steeped to perfection.&quot;, &quot;ingredients&quot;: [&quot;Green tea leaves&quot;, &quot;Filtered water (80°C)&quot;, &quot;Optional lemon&quot;], &quot;video_id&quot;: &quot;N4vKMZT2gog&quot;, &quot;video_title&quot;: &quot;How to Brew Green Tea&quot;, &quot;calories&quot;: 2, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;0g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CHAI LATTE ========== -->
+    <div class="gallery-item" data-category="tea" data-name="chai latte" data-ingredients="black tea cardamom pods cinnamon stick cloves ginger milk honey">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 6, &quot;name&quot;: &quot;Chai Latte&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$4.25&quot;, &quot;image&quot;: &quot;Chai Latte1.PNG&quot;, &quot;short_desc&quot;: &quot;Spiced black tea with steamed milk and honey.&quot;, &quot;ingredients&quot;: [&quot;Black tea&quot;, &quot;Cardamom pods&quot;, &quot;Cinnamon stick&quot;, &quot;Cloves&quot;, &quot;Ginger&quot;, &quot;Milk&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;4g1x5yIJtMg&quot;, &quot;video_title&quot;: &quot;Authentic Chai Latte Recipe&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;28g&quot;, &quot;fat&quot;: &quot;6g&quot;})">
+            <span class="category-badge">Tea</span>
+            <span class="price-tag">$4.25</span>
+            <img src="Chai Latte1.PNG" alt="Chai Latte" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4g1x5yIJtMg', 'Authentic Chai Latte Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Chai Latte</h3>
+            <p class="short-desc">Spiced black tea with steamed milk and honey.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Black tea</li>
+                    <li class="ingredient-tag">Cardamom pods</li>
+                    <li class="ingredient-tag">Cinnamon stick</li>
+                    <li class="ingredient-tag">Cloves</li>
+                    <li class="ingredient-tag">Ginger</li>
+                    <li class="ingredient-tag">Milk</li>
+                    <li class="ingredient-tag">Honey</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4g1x5yIJtMg', 'Authentic Chai Latte Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 6, &quot;name&quot;: &quot;Chai Latte&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$4.25&quot;, &quot;image&quot;: &quot;Chai Latte1.PNG&quot;, &quot;short_desc&quot;: &quot;Spiced black tea with steamed milk and honey.&quot;, &quot;ingredients&quot;: [&quot;Black tea&quot;, &quot;Cardamom pods&quot;, &quot;Cinnamon stick&quot;, &quot;Cloves&quot;, &quot;Ginger&quot;, &quot;Milk&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;4g1x5yIJtMg&quot;, &quot;video_title&quot;: &quot;Authentic Chai Latte Recipe&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;28g&quot;, &quot;fat&quot;: &quot;6g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== EARL GREY ========== -->
+    <div class="gallery-item" data-category="tea" data-name="earl grey" data-ingredients="ceylon black tea bergamot oil filtered water lemon slice">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 7, &quot;name&quot;: &quot;Earl Grey&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$3.50&quot;, &quot;image&quot;: &quot;Earl Grey1.PNG&quot;, &quot;short_desc&quot;: &quot;Classic black tea flavored with bergamot oil.&quot;, &quot;ingredients&quot;: [&quot;Ceylon black tea&quot;, &quot;Bergamot oil&quot;, &quot;Filtered water&quot;, &quot;Lemon slice&quot;], &quot;video_id&quot;: &quot;SIO9Ui58WvQ&quot;, &quot;video_title&quot;: &quot;Brewing Earl Grey Tea&quot;, &quot;calories&quot;: 2, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;0g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Tea</span>
+            <span class="price-tag">$3.50</span>
+            <img src="Earl Grey1.PNG" alt="Earl Grey" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('SIO9Ui58WvQ', 'Brewing Earl Grey Tea')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Earl Grey</h3>
+            <p class="short-desc">Classic black tea flavored with bergamot oil.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Ceylon black tea</li>
+                    <li class="ingredient-tag">Bergamot oil</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                    <li class="ingredient-tag">Lemon slice</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('SIO9Ui58WvQ', 'Brewing Earl Grey Tea')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 7, &quot;name&quot;: &quot;Earl Grey&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$3.50&quot;, &quot;image&quot;: &quot;Earl Grey1.PNG&quot;, &quot;short_desc&quot;: &quot;Classic black tea flavored with bergamot oil.&quot;, &quot;ingredients&quot;: [&quot;Ceylon black tea&quot;, &quot;Bergamot oil&quot;, &quot;Filtered water&quot;, &quot;Lemon slice&quot;], &quot;video_id&quot;: &quot;SIO9Ui58WvQ&quot;, &quot;video_title&quot;: &quot;Brewing Earl Grey Tea&quot;, &quot;calories&quot;: 2, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;0g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ICED PEACH TEA ========== -->
+    <div class="gallery-item" data-category="tea" data-name="iced peach tea" data-ingredients="black tea fresh peaches sugar ice mint leaves">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 8, &quot;name&quot;: &quot;Iced Peach Tea&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$4.00&quot;, &quot;image&quot;: &quot;Iced Peach Tea1.PNG&quot;, &quot;short_desc&quot;: &quot;Refreshing black tea infused with natural peach flavor.&quot;, &quot;ingredients&quot;: [&quot;Black tea&quot;, &quot;Fresh peaches&quot;, &quot;Sugar&quot;, &quot;Ice&quot;, &quot;Mint leaves&quot;], &quot;video_id&quot;: &quot;JvMfmNUTLUY&quot;, &quot;video_title&quot;: &quot;Iced Peach Tea Recipe&quot;, &quot;calories&quot;: 90, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;22g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Tea</span>
+            <span class="price-tag">$4.00</span>
+            <img src="Iced Peach Tea1.PNG" alt="Iced Peach Tea" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('JvMfmNUTLUY', 'Iced Peach Tea Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Iced Peach Tea</h3>
+            <p class="short-desc">Refreshing black tea infused with natural peach flavor.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Black tea</li>
+                    <li class="ingredient-tag">Fresh peaches</li>
+                    <li class="ingredient-tag">Sugar</li>
+                    <li class="ingredient-tag">Ice</li>
+                    <li class="ingredient-tag">Mint leaves</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('JvMfmNUTLUY', 'Iced Peach Tea Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 8, &quot;name&quot;: &quot;Iced Peach Tea&quot;, &quot;category&quot;: &quot;tea&quot;, &quot;price&quot;: &quot;$4.00&quot;, &quot;image&quot;: &quot;Iced Peach Tea1.PNG&quot;, &quot;short_desc&quot;: &quot;Refreshing black tea infused with natural peach flavor.&quot;, &quot;ingredients&quot;: [&quot;Black tea&quot;, &quot;Fresh peaches&quot;, &quot;Sugar&quot;, &quot;Ice&quot;, &quot;Mint leaves&quot;], &quot;video_id&quot;: &quot;JvMfmNUTLUY&quot;, &quot;video_title&quot;: &quot;Iced Peach Tea Recipe&quot;, &quot;calories&quot;: 90, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;22g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== PASTRIES ITEMS ========== -->
+    <!-- ========== BUTTER CROISSANT ========== -->
+    <div class="gallery-item" data-category="pastries" data-name="butter croissant" data-ingredients="flour butter yeast sugar salt milk">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 9, &quot;name&quot;: &quot;Butter Croissant&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$3.25&quot;, &quot;image&quot;: &quot;Butter Croissant.png&quot;, &quot;short_desc&quot;: &quot;Classic French croissant with layers of buttery pastry.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Butter&quot;, &quot;Yeast&quot;, &quot;Sugar&quot;, &quot;Salt&quot;, &quot;Milk&quot;], &quot;video_id&quot;: &quot;bSPwz5oroFE&quot;, &quot;video_title&quot;: &quot;How Croissants Are Made&quot;, &quot;calories&quot;: 280, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;31g&quot;, &quot;fat&quot;: &quot;15g&quot;})">
+            <span class="category-badge">Pastries</span>
+            <span class="price-tag">$3.25</span>
+            <img src="Butter Croissant.png" alt="Butter Croissant" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('bSPwz5oroFE', 'How Croissants Are Made')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Butter Croissant</h3>
+            <p class="short-desc">Classic French croissant with layers of buttery pastry.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Flour</li>
+                    <li class="ingredient-tag">Butter</li>
+                    <li class="ingredient-tag">Yeast</li>
+                    <li class="ingredient-tag">Sugar</li>
+                    <li class="ingredient-tag">Salt</li>
+                    <li class="ingredient-tag">Milk</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('bSPwz5oroFE', 'How Croissants Are Made')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 9, &quot;name&quot;: &quot;Butter Croissant&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$3.25&quot;, &quot;image&quot;: &quot;Butter Croissant.png&quot;, &quot;short_desc&quot;: &quot;Classic French croissant with layers of buttery pastry.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Butter&quot;, &quot;Yeast&quot;, &quot;Sugar&quot;, &quot;Salt&quot;, &quot;Milk&quot;], &quot;video_id&quot;: &quot;bSPwz5oroFE&quot;, &quot;video_title&quot;: &quot;How Croissants Are Made&quot;, &quot;calories&quot;: 280, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;31g&quot;, &quot;fat&quot;: &quot;15g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CHOCOLATE CROISSANT ========== -->
+    <div class="gallery-item" data-category="pastries" data-name="chocolate croissant" data-ingredients="croissant dough dark chocolate batons egg wash">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 10, &quot;name&quot;: &quot;Chocolate Croissant&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$3.75&quot;, &quot;image&quot;: &quot;Chocolate Croissant.png&quot;, &quot;short_desc&quot;: &quot;Our buttery croissant filled with rich, melted chocolate.&quot;, &quot;ingredients&quot;: [&quot;Croissant dough&quot;, &quot;Dark chocolate batons&quot;, &quot;Egg wash&quot;], &quot;video_id&quot;: &quot;7PXxM6a7nsA&quot;, &quot;video_title&quot;: &quot;Pain au Chocolat Making&quot;, &quot;calories&quot;: 320, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;38g&quot;, &quot;fat&quot;: &quot;17g&quot;})">
+            <span class="category-badge">Pastries</span>
+            <span class="price-tag">$3.75</span>
+            <img src="Chocolate Croissant.png" alt="Chocolate Croissant" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('7PXxM6a7nsA', 'Pain au Chocolat Making')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Chocolate Croissant</h3>
+            <p class="short-desc">Our buttery croissant filled with rich, melted chocolate.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Croissant dough</li>
+                    <li class="ingredient-tag">Dark chocolate batons</li>
+                    <li class="ingredient-tag">Egg wash</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('7PXxM6a7nsA', 'Pain au Chocolat Making')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 10, &quot;name&quot;: &quot;Chocolate Croissant&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$3.75&quot;, &quot;image&quot;: &quot;Chocolate Croissant.png&quot;, &quot;short_desc&quot;: &quot;Our buttery croissant filled with rich, melted chocolate.&quot;, &quot;ingredients&quot;: [&quot;Croissant dough&quot;, &quot;Dark chocolate batons&quot;, &quot;Egg wash&quot;], &quot;video_id&quot;: &quot;7PXxM6a7nsA&quot;, &quot;video_title&quot;: &quot;Pain au Chocolat Making&quot;, &quot;calories&quot;: 320, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;38g&quot;, &quot;fat&quot;: &quot;17g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== BLUEBERRY MUFFIN ========== -->
+    <div class="gallery-item" data-category="pastries" data-name="blueberry muffin" data-ingredients="flour blueberries sugar butter eggs milk cinnamon streusel">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 11, &quot;name&quot;: &quot;Blueberry Muffin&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$3.50&quot;, &quot;image&quot;: &quot;Blueberry Muffin.png&quot;, &quot;short_desc&quot;: &quot;Moist muffin packed with juicy blueberries.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Blueberries&quot;, &quot;Sugar&quot;, &quot;Butter&quot;, &quot;Eggs&quot;, &quot;Milk&quot;, &quot;Cinnamon streusel&quot;], &quot;video_id&quot;: &quot;BEGIb6BhH2M&quot;, &quot;video_title&quot;: &quot;Blueberry Muffin Recipe&quot;, &quot;calories&quot;: 340, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;48g&quot;, &quot;fat&quot;: &quot;14g&quot;})">
+            <span class="category-badge">Pastries</span>
+            <span class="price-tag">$3.50</span>
+            <img src="Blueberry Muffin.png" alt="Blueberry Muffin" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('BEGIb6BhH2M', 'Blueberry Muffin Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Blueberry Muffin</h3>
+            <p class="short-desc">Moist muffin packed with juicy blueberries.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Flour</li>
+                    <li class="ingredient-tag">Blueberries</li>
+                    <li class="ingredient-tag">Sugar</li>
+                    <li class="ingredient-tag">Butter</li>
+                    <li class="ingredient-tag">Eggs</li>
+                    <li class="ingredient-tag">Milk</li>
+                    <li class="ingredient-tag">Cinnamon streusel</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('BEGIb6BhH2M', 'Blueberry Muffin Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 11, &quot;name&quot;: &quot;Blueberry Muffin&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$3.50&quot;, &quot;image&quot;: &quot;Blueberry Muffin.png&quot;, &quot;short_desc&quot;: &quot;Moist muffin packed with juicy blueberries.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Blueberries&quot;, &quot;Sugar&quot;, &quot;Butter&quot;, &quot;Eggs&quot;, &quot;Milk&quot;, &quot;Cinnamon streusel&quot;], &quot;video_id&quot;: &quot;BEGIb6BhH2M&quot;, &quot;video_title&quot;: &quot;Blueberry Muffin Recipe&quot;, &quot;calories&quot;: 340, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;48g&quot;, &quot;fat&quot;: &quot;14g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CINNAMON ROLL ========== -->
+    <div class="gallery-item" data-category="pastries" data-name="cinnamon roll" data-ingredients="yeasted dough cinnamon brown sugar butter cream cheese glaze">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 12, &quot;name&quot;: &quot;Cinnamon Roll&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$4.25&quot;, &quot;image&quot;: &quot;Cinnamon Roll.png&quot;, &quot;short_desc&quot;: &quot;Soft pastry swirled with cinnamon sugar.&quot;, &quot;ingredients&quot;: [&quot;Yeasted dough&quot;, &quot;Cinnamon&quot;, &quot;Brown sugar&quot;, &quot;Butter&quot;, &quot;Cream cheese glaze&quot;], &quot;video_id&quot;: &quot;UsI5U9WBMyU&quot;, &quot;video_title&quot;: &quot;Homemade Cinnamon Rolls&quot;, &quot;calories&quot;: 420, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;58g&quot;, &quot;fat&quot;: &quot;19g&quot;})">
+            <span class="category-badge">Pastries</span>
+            <span class="price-tag">$4.25</span>
+            <img src="Cinnamon Roll.png" alt="Cinnamon Roll" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('UsI5U9WBMyU', 'Homemade Cinnamon Rolls')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Cinnamon Roll</h3>
+            <p class="short-desc">Soft pastry swirled with cinnamon sugar.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Yeasted dough</li>
+                    <li class="ingredient-tag">Cinnamon</li>
+                    <li class="ingredient-tag">Brown sugar</li>
+                    <li class="ingredient-tag">Butter</li>
+                    <li class="ingredient-tag">Cream cheese glaze</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('UsI5U9WBMyU', 'Homemade Cinnamon Rolls')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 12, &quot;name&quot;: &quot;Cinnamon Roll&quot;, &quot;category&quot;: &quot;pastries&quot;, &quot;price&quot;: &quot;$4.25&quot;, &quot;image&quot;: &quot;Cinnamon Roll.png&quot;, &quot;short_desc&quot;: &quot;Soft pastry swirled with cinnamon sugar.&quot;, &quot;ingredients&quot;: [&quot;Yeasted dough&quot;, &quot;Cinnamon&quot;, &quot;Brown sugar&quot;, &quot;Butter&quot;, &quot;Cream cheese glaze&quot;], &quot;video_id&quot;: &quot;UsI5U9WBMyU&quot;, &quot;video_title&quot;: &quot;Homemade Cinnamon Rolls&quot;, &quot;calories&quot;: 420, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;58g&quot;, &quot;fat&quot;: &quot;19g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== JUICES ITEMS ========== -->
+    <!-- ========== FRESH ORANGE JUICE ========== -->
+    <div class="gallery-item" data-category="juices" data-name="fresh orange juice" data-ingredients="valencia oranges ice">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 13, &quot;name&quot;: &quot;Fresh Orange Juice&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$4.50&quot;, &quot;image&quot;: &quot;Fresh Orange Juice1.PNG&quot;, &quot;short_desc&quot;: &quot;Freshly squeezed orange juice packed with vitamin C.&quot;, &quot;ingredients&quot;: [&quot;Valencia oranges&quot;, &quot;Ice&quot;], &quot;video_id&quot;: &quot;w6IjwKOB_t8&quot;, &quot;video_title&quot;: &quot;Fresh Orange Juice&quot;, &quot;calories&quot;: 110, &quot;protein&quot;: &quot;2g&quot;, &quot;carbs&quot;: &quot;26g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Juices</span>
+            <span class="price-tag">$4.50</span>
+            <img src="Fresh Orange Juice1.PNG" alt="Fresh Orange Juice" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('w6IjwKOB_t8', 'Fresh Orange Juice')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Fresh Orange Juice</h3>
+            <p class="short-desc">Freshly squeezed orange juice packed with vitamin C.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Valencia oranges</li>
+                    <li class="ingredient-tag">Ice</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('w6IjwKOB_t8', 'Fresh Orange Juice')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 13, &quot;name&quot;: &quot;Fresh Orange Juice&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$4.50&quot;, &quot;image&quot;: &quot;Fresh Orange Juice1.PNG&quot;, &quot;short_desc&quot;: &quot;Freshly squeezed orange juice packed with vitamin C.&quot;, &quot;ingredients&quot;: [&quot;Valencia oranges&quot;, &quot;Ice&quot;], &quot;video_id&quot;: &quot;w6IjwKOB_t8&quot;, &quot;video_title&quot;: &quot;Fresh Orange Juice&quot;, &quot;calories&quot;: 110, &quot;protein&quot;: &quot;2g&quot;, &quot;carbs&quot;: &quot;26g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== GREEN DETOX ========== -->
+    <div class="gallery-item" data-category="juices" data-name="green detox" data-ingredients="kale spinach cucumber green apple lemon ginger">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 14, &quot;name&quot;: &quot;Green Detox&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Green Detox1.PNG&quot;, &quot;short_desc&quot;: &quot;Kale, spinach, cucumber, green apple, and lemon.&quot;, &quot;ingredients&quot;: [&quot;Kale&quot;, &quot;Spinach&quot;, &quot;Cucumber&quot;, &quot;Green apple&quot;, &quot;Lemon&quot;, &quot;Ginger&quot;], &quot;video_id&quot;: &quot;dbmiONt1DR8&quot;, &quot;video_title&quot;: &quot;Green Juice Recipe&quot;, &quot;calories&quot;: 140, &quot;protein&quot;: &quot;4g&quot;, &quot;carbs&quot;: &quot;32g&quot;, &quot;fat&quot;: &quot;1g&quot;})">
+            <span class="category-badge">Juices</span>
+            <span class="price-tag">$5.50</span>
+            <img src="Green Detox1.PNG" alt="Green Detox" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('dbmiONt1DR8', 'Green Juice Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Green Detox</h3>
+            <p class="short-desc">Kale, spinach, cucumber, green apple, and lemon.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Kale</li>
+                    <li class="ingredient-tag">Spinach</li>
+                    <li class="ingredient-tag">Cucumber</li>
+                    <li class="ingredient-tag">Green apple</li>
+                    <li class="ingredient-tag">Lemon</li>
+                    <li class="ingredient-tag">Ginger</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('dbmiONt1DR8', 'Green Juice Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 14, &quot;name&quot;: &quot;Green Detox&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Green Detox1.PNG&quot;, &quot;short_desc&quot;: &quot;Kale, spinach, cucumber, green apple, and lemon.&quot;, &quot;ingredients&quot;: [&quot;Kale&quot;, &quot;Spinach&quot;, &quot;Cucumber&quot;, &quot;Green apple&quot;, &quot;Lemon&quot;, &quot;Ginger&quot;], &quot;video_id&quot;: &quot;dbmiONt1DR8&quot;, &quot;video_title&quot;: &quot;Green Juice Recipe&quot;, &quot;calories&quot;: 140, &quot;protein&quot;: &quot;4g&quot;, &quot;carbs&quot;: &quot;32g&quot;, &quot;fat&quot;: &quot;1g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== BERRY BLAST ========== -->
+    <div class="gallery-item" data-category="juices" data-name="berry blast" data-ingredients="strawberries blueberries raspberries banana coconut water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 15, &quot;name&quot;: &quot;Berry Blast&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;Berry Blast1.PNG&quot;, &quot;short_desc&quot;: &quot;A mix of strawberries, blueberries, raspberries.&quot;, &quot;ingredients&quot;: [&quot;Strawberries&quot;, &quot;Blueberries&quot;, &quot;Raspberries&quot;, &quot;Banana&quot;, &quot;Coconut water&quot;], &quot;video_id&quot;: &quot;G2Ql7R3kDHc&quot;, &quot;video_title&quot;: &quot;Berry Smoothie Recipe&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;3g&quot;, &quot;carbs&quot;: &quot;42g&quot;, &quot;fat&quot;: &quot;2g&quot;})">
+            <span class="category-badge">Juices</span>
+            <span class="price-tag">$5.25</span>
+            <img src="Berry Blast1.PNG" alt="Berry Blast" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('G2Ql7R3kDHc', 'Berry Smoothie Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Berry Blast</h3>
+            <p class="short-desc">A mix of strawberries, blueberries, raspberries.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Strawberries</li>
+                    <li class="ingredient-tag">Blueberries</li>
+                    <li class="ingredient-tag">Raspberries</li>
+                    <li class="ingredient-tag">Banana</li>
+                    <li class="ingredient-tag">Coconut water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('G2Ql7R3kDHc', 'Berry Smoothie Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 15, &quot;name&quot;: &quot;Berry Blast&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;Berry Blast1.PNG&quot;, &quot;short_desc&quot;: &quot;A mix of strawberries, blueberries, raspberries.&quot;, &quot;ingredients&quot;: [&quot;Strawberries&quot;, &quot;Blueberries&quot;, &quot;Raspberries&quot;, &quot;Banana&quot;, &quot;Coconut water&quot;], &quot;video_id&quot;: &quot;G2Ql7R3kDHc&quot;, &quot;video_title&quot;: &quot;Berry Smoothie Recipe&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;3g&quot;, &quot;carbs&quot;: &quot;42g&quot;, &quot;fat&quot;: &quot;2g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TROPICAL SUNRISE ========== -->
+    <div class="gallery-item" data-category="juices" data-name="tropical sunrise" data-ingredients="pineapple mango orange ginger coconut water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 16, &quot;name&quot;: &quot;Tropical Sunrise&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;Tropical Sunrise1.PNG&quot;, &quot;short_desc&quot;: &quot;Pineapple, mango, and orange with a hint of ginger.&quot;, &quot;ingredients&quot;: [&quot;Pineapple&quot;, &quot;Mango&quot;, &quot;Orange&quot;, &quot;Ginger&quot;, &quot;Coconut water&quot;], &quot;video_id&quot;: &quot;WkMcrOSc2gw&quot;, &quot;video_title&quot;: &quot;Tropical Juice Blend&quot;, &quot;calories&quot;: 160, &quot;protein&quot;: &quot;2g&quot;, &quot;carbs&quot;: &quot;38g&quot;, &quot;fat&quot;: &quot;1g&quot;})">
+            <span class="category-badge">Juices</span>
+            <span class="price-tag">$5.75</span>
+            <img src="Tropical Sunrise1.PNG" alt="Tropical Sunrise" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('WkMcrOSc2gw', 'Tropical Juice Blend')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Tropical Sunrise</h3>
+            <p class="short-desc">Pineapple, mango, and orange with a hint of ginger.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Pineapple</li>
+                    <li class="ingredient-tag">Mango</li>
+                    <li class="ingredient-tag">Orange</li>
+                    <li class="ingredient-tag">Ginger</li>
+                    <li class="ingredient-tag">Coconut water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('WkMcrOSc2gw', 'Tropical Juice Blend')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 16, &quot;name&quot;: &quot;Tropical Sunrise&quot;, &quot;category&quot;: &quot;juices&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;Tropical Sunrise1.PNG&quot;, &quot;short_desc&quot;: &quot;Pineapple, mango, and orange with a hint of ginger.&quot;, &quot;ingredients&quot;: [&quot;Pineapple&quot;, &quot;Mango&quot;, &quot;Orange&quot;, &quot;Ginger&quot;, &quot;Coconut water&quot;], &quot;video_id&quot;: &quot;WkMcrOSc2gw&quot;, &quot;video_title&quot;: &quot;Tropical Juice Blend&quot;, &quot;calories&quot;: 160, &quot;protein&quot;: &quot;2g&quot;, &quot;carbs&quot;: &quot;38g&quot;, &quot;fat&quot;: &quot;1g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SPECIALTY DRINKS ========== -->
+    <!-- ========== MATCHA LATTE ========== -->
+    <div class="gallery-item" data-category="specialty" data-name="matcha latte" data-ingredients="ceremonial matcha powder hot water steamed milk optional honey">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 17, &quot;name&quot;: &quot;Matcha Latte&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;Matcha Latte.png&quot;, &quot;short_desc&quot;: &quot;Premium ceremonial-grade matcha with steamed milk.&quot;, &quot;ingredients&quot;: [&quot;Ceremonial matcha powder&quot;, &quot;Hot water&quot;, &quot;Steamed milk&quot;, &quot;Optional honey&quot;], &quot;video_id&quot;: &quot;7xVhuurL8cY&quot;, &quot;video_title&quot;: &quot;How to Make Matcha Latte&quot;, &quot;calories&quot;: 120, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;12g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+            <span class="category-badge">Specialty</span>
+            <span class="price-tag">$5.25</span>
+            <img src="Matcha Latte.png" alt="Matcha Latte" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('7xVhuurL8cY', 'How to Make Matcha Latte')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Matcha Latte</h3>
+            <p class="short-desc">Premium ceremonial-grade matcha with steamed milk.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Ceremonial matcha powder</li>
+                    <li class="ingredient-tag">Hot water</li>
+                    <li class="ingredient-tag">Steamed milk</li>
+                    <li class="ingredient-tag">Optional honey</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('7xVhuurL8cY', 'How to Make Matcha Latte')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 17, &quot;name&quot;: &quot;Matcha Latte&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;Matcha Latte.png&quot;, &quot;short_desc&quot;: &quot;Premium ceremonial-grade matcha with steamed milk.&quot;, &quot;ingredients&quot;: [&quot;Ceremonial matcha powder&quot;, &quot;Hot water&quot;, &quot;Steamed milk&quot;, &quot;Optional honey&quot;], &quot;video_id&quot;: &quot;7xVhuurL8cY&quot;, &quot;video_title&quot;: &quot;How to Make Matcha Latte&quot;, &quot;calories&quot;: 120, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;12g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TURMERIC GOLDEN MILK ========== -->
+    <div class="gallery-item" data-category="specialty" data-name="turmeric golden milk" data-ingredients="turmeric ginger cinnamon black pepper honey milk">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 18, &quot;name&quot;: &quot;Turmeric Golden Milk&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Golden Milk.png&quot;, &quot;short_desc&quot;: &quot;Turmeric, ginger, cinnamon blended with warm milk.&quot;, &quot;ingredients&quot;: [&quot;Turmeric&quot;, &quot;Ginger&quot;, &quot;Cinnamon&quot;, &quot;Black pepper&quot;, &quot;Honey&quot;, &quot;Milk&quot;], &quot;video_id&quot;: &quot;fOBpBGlr36o&quot;, &quot;video_title&quot;: &quot;Golden Milk Recipe&quot;, &quot;calories&quot;: 140, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;18g&quot;, &quot;fat&quot;: &quot;6g&quot;})">
+            <span class="category-badge">Specialty</span>
+            <span class="price-tag">$5.50</span>
+            <img src="Golden Milk.png" alt="Turmeric Golden Milk" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('fOBpBGlr36o', 'Golden Milk Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Turmeric Golden Milk</h3>
+            <p class="short-desc">Turmeric, ginger, cinnamon blended with warm milk.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Turmeric</li>
+                    <li class="ingredient-tag">Ginger</li>
+                    <li class="ingredient-tag">Cinnamon</li>
+                    <li class="ingredient-tag">Black pepper</li>
+                    <li class="ingredient-tag">Honey</li>
+                    <li class="ingredient-tag">Milk</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('fOBpBGlr36o', 'Golden Milk Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 18, &quot;name&quot;: &quot;Turmeric Golden Milk&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Golden Milk.png&quot;, &quot;short_desc&quot;: &quot;Turmeric, ginger, cinnamon blended with warm milk.&quot;, &quot;ingredients&quot;: [&quot;Turmeric&quot;, &quot;Ginger&quot;, &quot;Cinnamon&quot;, &quot;Black pepper&quot;, &quot;Honey&quot;, &quot;Milk&quot;], &quot;video_id&quot;: &quot;fOBpBGlr36o&quot;, &quot;video_title&quot;: &quot;Golden Milk Recipe&quot;, &quot;calories&quot;: 140, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;18g&quot;, &quot;fat&quot;: &quot;6g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ICED LAVENDER LATTE ========== -->
+    <div class="gallery-item" data-category="specialty" data-name="iced lavender latte" data-ingredients="espresso lavender syrup cold milk ice dried lavender">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 19, &quot;name&quot;: &quot;Iced Lavender Latte&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;Iced Lavender Latte.png&quot;, &quot;short_desc&quot;: &quot;Espresso with lavender syrup and cold milk.&quot;, &quot;ingredients&quot;: [&quot;Espresso&quot;, &quot;Lavender syrup&quot;, &quot;Cold milk&quot;, &quot;Ice&quot;, &quot;Dried lavender&quot;], &quot;video_id&quot;: &quot;SjDOA6zb5qg&quot;, &quot;video_title&quot;: &quot;Lavender Latte Recipe&quot;, &quot;calories&quot;: 160, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;24g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+            <span class="category-badge">Specialty</span>
+            <span class="price-tag">$5.75</span>
+            <img src="Iced Lavender Latte.png" alt="Iced Lavender Latte" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('SjDOA6zb5qg', 'Lavender Latte Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Iced Lavender Latte</h3>
+            <p class="short-desc">Espresso with lavender syrup and cold milk.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Espresso</li>
+                    <li class="ingredient-tag">Lavender syrup</li>
+                    <li class="ingredient-tag">Cold milk</li>
+                    <li class="ingredient-tag">Ice</li>
+                    <li class="ingredient-tag">Dried lavender</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('SjDOA6zb5qg', 'Lavender Latte Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 19, &quot;name&quot;: &quot;Iced Lavender Latte&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;Iced Lavender Latte.png&quot;, &quot;short_desc&quot;: &quot;Espresso with lavender syrup and cold milk.&quot;, &quot;ingredients&quot;: [&quot;Espresso&quot;, &quot;Lavender syrup&quot;, &quot;Cold milk&quot;, &quot;Ice&quot;, &quot;Dried lavender&quot;], &quot;video_id&quot;: &quot;SjDOA6zb5qg&quot;, &quot;video_title&quot;: &quot;Lavender Latte Recipe&quot;, &quot;calories&quot;: 160, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;24g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== DALGONA COFFEE ========== -->
+    <div class="gallery-item" data-category="specialty" data-name="dalgona coffee" data-ingredients="instant coffee sugar hot water cold milk ice">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 20, &quot;name&quot;: &quot;Dalgona Coffee&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Dalgona Coffee.png&quot;, &quot;short_desc&quot;: &quot;Whipped coffee topping served over cold milk.&quot;, &quot;ingredients&quot;: [&quot;Instant coffee&quot;, &quot;Sugar&quot;, &quot;Hot water&quot;, &quot;Cold milk&quot;, &quot;Ice&quot;], &quot;video_id&quot;: &quot;9SjCEOWd3PU&quot;, &quot;video_title&quot;: &quot;Dalgona Coffee Recipe&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;28g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+            <span class="category-badge">Specialty</span>
+            <span class="price-tag">$5.50</span>
+            <img src="Dalgona Coffee.png" alt="Dalgona Coffee" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('9SjCEOWd3PU', 'Dalgona Coffee Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Dalgona Coffee</h3>
+            <p class="short-desc">Whipped coffee topping served over cold milk.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Instant coffee</li>
+                    <li class="ingredient-tag">Sugar</li>
+                    <li class="ingredient-tag">Hot water</li>
+                    <li class="ingredient-tag">Cold milk</li>
+                    <li class="ingredient-tag">Ice</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('9SjCEOWd3PU', 'Dalgona Coffee Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 20, &quot;name&quot;: &quot;Dalgona Coffee&quot;, &quot;category&quot;: &quot;specialty&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Dalgona Coffee.png&quot;, &quot;short_desc&quot;: &quot;Whipped coffee topping served over cold milk.&quot;, &quot;ingredients&quot;: [&quot;Instant coffee&quot;, &quot;Sugar&quot;, &quot;Hot water&quot;, &quot;Cold milk&quot;, &quot;Ice&quot;], &quot;video_id&quot;: &quot;9SjCEOWd3PU&quot;, &quot;video_title&quot;: &quot;Dalgona Coffee Recipe&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;28g&quot;, &quot;fat&quot;: &quot;5g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TRADITIONAL ETHIOPIAN DISHES ========== -->
+    <!-- ========== DORO WAT ========== -->
+    <div class="gallery-item" data-category="traditional" data-name="doro wat" data-ingredients="chicken thighs red onions berbere spice niter kibbeh hard-boiled eggs ginger garlic">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 21, &quot;name&quot;: &quot;Doro Wat&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$12.99&quot;, &quot;image&quot;: &quot;Doro Wat1.PNG&quot;, &quot;short_desc&quot;: &quot;Spicy chicken stew with berbere spice.&quot;, &quot;ingredients&quot;: [&quot;Chicken thighs&quot;, &quot;Red onions&quot;, &quot;Berbere spice&quot;, &quot;Niter kibbeh&quot;, &quot;Hard-boiled eggs&quot;, &quot;Ginger&quot;, &quot;Garlic&quot;], &quot;video_id&quot;: &quot;zi4AT6uYKUs&quot;, &quot;video_title&quot;: &quot;How to Make Doro Wat&quot;, &quot;calories&quot;: 450, &quot;protein&quot;: &quot;35g&quot;, &quot;carbs&quot;: &quot;18g&quot;, &quot;fat&quot;: &quot;28g&quot;})">
+            <span class="category-badge">Traditional</span>
+            <span class="price-tag">$12.99</span>
+            <img src="Doro Wat1.PNG" alt="Doro Wat" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('zi4AT6uYKUs', 'How to Make Doro Wat')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Doro Wat</h3>
+            <p class="short-desc">Spicy chicken stew with berbere spice.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Chicken thighs</li>
+                    <li class="ingredient-tag">Red onions</li>
+                    <li class="ingredient-tag">Berbere spice</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                    <li class="ingredient-tag">Hard-boiled eggs</li>
+                    <li class="ingredient-tag">Ginger</li>
+                    <li class="ingredient-tag">Garlic</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('zi4AT6uYKUs', 'How to Make Doro Wat')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 21, &quot;name&quot;: &quot;Doro Wat&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$12.99&quot;, &quot;image&quot;: &quot;Doro Wat1.PNG&quot;, &quot;short_desc&quot;: &quot;Spicy chicken stew with berbere spice.&quot;, &quot;ingredients&quot;: [&quot;Chicken thighs&quot;, &quot;Red onions&quot;, &quot;Berbere spice&quot;, &quot;Niter kibbeh&quot;, &quot;Hard-boiled eggs&quot;, &quot;Ginger&quot;, &quot;Garlic&quot;], &quot;video_id&quot;: &quot;zi4AT6uYKUs&quot;, &quot;video_title&quot;: &quot;How to Make Doro Wat&quot;, &quot;calories&quot;: 450, &quot;protein&quot;: &quot;35g&quot;, &quot;carbs&quot;: &quot;18g&quot;, &quot;fat&quot;: &quot;28g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== KITFO ========== -->
+    <div class="gallery-item" data-category="traditional" data-name="kitfo" data-ingredients="premium beef sirloin mitmita spice niter kibbeh cardamom ayib (cottage cheese) gomen (collards)">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 22, &quot;name&quot;: &quot;Kitfo&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$14.50&quot;, &quot;image&quot;: &quot;Kitfo1.PNG&quot;, &quot;short_desc&quot;: &quot;Minced beef seasoned with mitmita.&quot;, &quot;ingredients&quot;: [&quot;Premium beef sirloin&quot;, &quot;Mitmita spice&quot;, &quot;Niter kibbeh&quot;, &quot;Cardamom&quot;, &quot;Ayib (cottage cheese)&quot;, &quot;Gomen (collards)&quot;], &quot;video_id&quot;: &quot;OUm72n1HUAY&quot;, &quot;video_title&quot;: &quot;Ethiopian Kitfo Recipe&quot;, &quot;calories&quot;: 520, &quot;protein&quot;: &quot;42g&quot;, &quot;carbs&quot;: &quot;4g&quot;, &quot;fat&quot;: &quot;38g&quot;})">
+            <span class="category-badge">Traditional</span>
+            <span class="price-tag">$14.50</span>
+            <img src="Kitfo1.PNG" alt="Kitfo" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('OUm72n1HUAY', 'Ethiopian Kitfo Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Kitfo</h3>
+            <p class="short-desc">Minced beef seasoned with mitmita.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Premium beef sirloin</li>
+                    <li class="ingredient-tag">Mitmita spice</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                    <li class="ingredient-tag">Cardamom</li>
+                    <li class="ingredient-tag">Ayib (cottage cheese)</li>
+                    <li class="ingredient-tag">Gomen (collards)</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('OUm72n1HUAY', 'Ethiopian Kitfo Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 22, &quot;name&quot;: &quot;Kitfo&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$14.50&quot;, &quot;image&quot;: &quot;Kitfo1.PNG&quot;, &quot;short_desc&quot;: &quot;Minced beef seasoned with mitmita.&quot;, &quot;ingredients&quot;: [&quot;Premium beef sirloin&quot;, &quot;Mitmita spice&quot;, &quot;Niter kibbeh&quot;, &quot;Cardamom&quot;, &quot;Ayib (cottage cheese)&quot;, &quot;Gomen (collards)&quot;], &quot;video_id&quot;: &quot;OUm72n1HUAY&quot;, &quot;video_title&quot;: &quot;Ethiopian Kitfo Recipe&quot;, &quot;calories&quot;: 520, &quot;protein&quot;: &quot;42g&quot;, &quot;carbs&quot;: &quot;4g&quot;, &quot;fat&quot;: &quot;38g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SHIRO WAT ========== -->
+    <div class="gallery-item" data-category="traditional" data-name="shiro wat" data-ingredients="shiro powder (chickpea flour) onions garlic berbere niter kibbeh vegetable oil">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 23, &quot;name&quot;: &quot;Shiro Wat&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$10.99&quot;, &quot;image&quot;: &quot;Shiro Wat1.PNG&quot;, &quot;short_desc&quot;: &quot;Flavorful chickpea stew cooked with berbere.&quot;, &quot;ingredients&quot;: [&quot;Shiro powder (chickpea flour)&quot;, &quot;Onions&quot;, &quot;Garlic&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;, &quot;Vegetable oil&quot;], &quot;video_id&quot;: &quot;7aQX-hIvnPM&quot;, &quot;video_title&quot;: &quot;Shiro Wat Preparation&quot;, &quot;calories&quot;: 320, &quot;protein&quot;: &quot;14g&quot;, &quot;carbs&quot;: &quot;42g&quot;, &quot;fat&quot;: &quot;12g&quot;})">
+            <span class="category-badge">Traditional</span>
+            <span class="price-tag">$10.99</span>
+            <img src="Shiro Wat1.PNG" alt="Shiro Wat" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('7aQX-hIvnPM', 'Shiro Wat Preparation')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Shiro Wat</h3>
+            <p class="short-desc">Flavorful chickpea stew cooked with berbere.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Shiro powder (chickpea flour)</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Garlic</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                    <li class="ingredient-tag">Vegetable oil</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('7aQX-hIvnPM', 'Shiro Wat Preparation')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 23, &quot;name&quot;: &quot;Shiro Wat&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$10.99&quot;, &quot;image&quot;: &quot;Shiro Wat1.PNG&quot;, &quot;short_desc&quot;: &quot;Flavorful chickpea stew cooked with berbere.&quot;, &quot;ingredients&quot;: [&quot;Shiro powder (chickpea flour)&quot;, &quot;Onions&quot;, &quot;Garlic&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;, &quot;Vegetable oil&quot;], &quot;video_id&quot;: &quot;7aQX-hIvnPM&quot;, &quot;video_title&quot;: &quot;Shiro Wat Preparation&quot;, &quot;calories&quot;: 320, &quot;protein&quot;: &quot;14g&quot;, &quot;carbs&quot;: &quot;42g&quot;, &quot;fat&quot;: &quot;12g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TIBS (GENERAL) ========== -->
+    <div class="gallery-item" data-category="traditional" data-name="tibs" data-ingredients="beef or lamb onions bell peppers rosemary berbere niter kibbeh">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 24, &quot;name&quot;: &quot;Tibs&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$13.99&quot;, &quot;image&quot;: &quot;Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Sautéed beef or lamb with onions and peppers.&quot;, &quot;ingredients&quot;: [&quot;Beef or lamb&quot;, &quot;Onions&quot;, &quot;Bell peppers&quot;, &quot;Rosemary&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;iU3G37y-12M&quot;, &quot;video_title&quot;: &quot;Ethiopian Tibs Cooking&quot;, &quot;calories&quot;: 380, &quot;protein&quot;: &quot;32g&quot;, &quot;carbs&quot;: &quot;12g&quot;, &quot;fat&quot;: &quot;24g&quot;})">
+            <span class="category-badge">Traditional</span>
+            <span class="price-tag">$13.99</span>
+            <img src="Tibs1.PNG" alt="Tibs" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('iU3G37y-12M', 'Ethiopian Tibs Cooking')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Tibs</h3>
+            <p class="short-desc">Sautéed beef or lamb with onions and peppers.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Beef or lamb</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Bell peppers</li>
+                    <li class="ingredient-tag">Rosemary</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('iU3G37y-12M', 'Ethiopian Tibs Cooking')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 24, &quot;name&quot;: &quot;Tibs&quot;, &quot;category&quot;: &quot;traditional&quot;, &quot;price&quot;: &quot;$13.99&quot;, &quot;image&quot;: &quot;Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Sautéed beef or lamb with onions and peppers.&quot;, &quot;ingredients&quot;: [&quot;Beef or lamb&quot;, &quot;Onions&quot;, &quot;Bell peppers&quot;, &quot;Rosemary&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;iU3G37y-12M&quot;, &quot;video_title&quot;: &quot;Ethiopian Tibs Cooking&quot;, &quot;calories&quot;: 380, &quot;protein&quot;: &quot;32g&quot;, &quot;carbs&quot;: &quot;12g&quot;, &quot;fat&quot;: &quot;24g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ETHIOPIAN COFFEE ITEMS ========== -->
+    <!-- ========== TRADITIONAL COFFEE CEREMONY ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="traditional coffee ceremony" data-ingredients="green yirgacheffe beans water frankincense popcorn traditional clay pot (jebena)">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 26, &quot;name&quot;: &quot;Traditional Coffee Ceremony&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$15.99&quot;, &quot;image&quot;: &quot;Coffee Ceremony1.PNG&quot;, &quot;short_desc&quot;: &quot;Authentic Ethiopian coffee ceremony with freshly roasted beans.&quot;, &quot;ingredients&quot;: [&quot;Green Yirgacheffe beans&quot;, &quot;Water&quot;, &quot;Frankincense&quot;, &quot;Popcorn&quot;, &quot;Traditional clay pot (jebena)&quot;], &quot;video_id&quot;: &quot;edi2MLZIEtw&quot;, &quot;video_title&quot;: &quot;Ethiopian Coffee Ceremony&quot;, &quot;calories&quot;: 10, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;2g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$15.99</span>
+            <img src="Coffee Ceremony1.PNG" alt="Traditional Coffee Ceremony" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('edi2MLZIEtw', 'Ethiopian Coffee Ceremony')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Traditional Coffee Ceremony</h3>
+            <p class="short-desc">Authentic Ethiopian coffee ceremony with freshly roasted beans.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Green Yirgacheffe beans</li>
+                    <li class="ingredient-tag">Water</li>
+                    <li class="ingredient-tag">Frankincense</li>
+                    <li class="ingredient-tag">Popcorn</li>
+                    <li class="ingredient-tag">Traditional clay pot (jebena)</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('edi2MLZIEtw', 'Ethiopian Coffee Ceremony')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 26, &quot;name&quot;: &quot;Traditional Coffee Ceremony&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$15.99&quot;, &quot;image&quot;: &quot;Coffee Ceremony1.PNG&quot;, &quot;short_desc&quot;: &quot;Authentic Ethiopian coffee ceremony with freshly roasted beans.&quot;, &quot;ingredients&quot;: [&quot;Green Yirgacheffe beans&quot;, &quot;Water&quot;, &quot;Frankincense&quot;, &quot;Popcorn&quot;, &quot;Traditional clay pot (jebena)&quot;], &quot;video_id&quot;: &quot;edi2MLZIEtw&quot;, &quot;video_title&quot;: &quot;Ethiopian Coffee Ceremony&quot;, &quot;calories&quot;: 10, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;2g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== YIRGACHEFFE ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="yirgacheffe" data-ingredients="yirgacheffe single-origin beans filtered water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 27, &quot;name&quot;: &quot;Yirgacheffe&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Yirgacheffe1.PNG&quot;, &quot;short_desc&quot;: &quot;Floral and citrusy single-origin coffee from Ethiopia's famous Yirgacheffe region.&quot;, &quot;ingredients&quot;: [&quot;Yirgacheffe single-origin beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Yirgacheffe Coffee Brewing&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$5.50</span>
+            <img src="Yirgacheffe1.PNG" alt="Yirgacheffe" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4TTp06RVy3M', 'Yirgacheffe Coffee Brewing')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Yirgacheffe</h3>
+            <p class="short-desc">Floral and citrusy single-origin coffee from Ethiopia's famous Yirgacheffe region.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Yirgacheffe single-origin beans</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4TTp06RVy3M', 'Yirgacheffe Coffee Brewing')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 27, &quot;name&quot;: &quot;Yirgacheffe&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;Yirgacheffe1.PNG&quot;, &quot;short_desc&quot;: &quot;Floral and citrusy single-origin coffee from Ethiopia's famous Yirgacheffe region.&quot;, &quot;ingredients&quot;: [&quot;Yirgacheffe single-origin beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Yirgacheffe Coffee Brewing&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SIDAMO ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="sidamo" data-ingredients="sidamo single-origin beans filtered water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 28, &quot;name&quot;: &quot;Sidamo&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Full-bodied coffee with wine-like characteristics and bright acidity.&quot;, &quot;ingredients&quot;: [&quot;Sidamo single-origin beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Sidamo Coffee Preparation&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$5.50</span>
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500" alt="Sidamo" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4TTp06RVy3M', 'Sidamo Coffee Preparation')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Sidamo</h3>
+            <p class="short-desc">Full-bodied coffee with wine-like characteristics and bright acidity.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Sidamo single-origin beans</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4TTp06RVy3M', 'Sidamo Coffee Preparation')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 28, &quot;name&quot;: &quot;Sidamo&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.50&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Full-bodied coffee with wine-like characteristics and bright acidity.&quot;, &quot;ingredients&quot;: [&quot;Sidamo single-origin beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Sidamo Coffee Preparation&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== HARRAR ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="harrar" data-ingredients="harrar single-origin beans filtered water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 29, &quot;name&quot;: &quot;Harrar&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Dry-processed coffee with bold blueberry notes and complex flavors.&quot;, &quot;ingredients&quot;: [&quot;Harrar single-origin beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Harrar Coffee Brewing&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$5.75</span>
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500" alt="Harrar" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4TTp06RVy3M', 'Harrar Coffee Brewing')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Harrar</h3>
+            <p class="short-desc">Dry-processed coffee with bold blueberry notes and complex flavors.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Harrar single-origin beans</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4TTp06RVy3M', 'Harrar Coffee Brewing')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 29, &quot;name&quot;: &quot;Harrar&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Dry-processed coffee with bold blueberry notes and complex flavors.&quot;, &quot;ingredients&quot;: [&quot;Harrar single-origin beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Harrar Coffee Brewing&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== BUNA WITH POPCORN ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="buna with popcorn" data-ingredients="roasted coffee beans popcorn niter kibbeh frankincense">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 30, &quot;name&quot;: &quot;Buna with Popcorn&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$6.99&quot;, &quot;image&quot;: &quot;Buna with Popcorn1.PNG&quot;, &quot;short_desc&quot;: &quot;Traditional Ethiopian coffee served with freshly popped popcorn.&quot;, &quot;ingredients&quot;: [&quot;Roasted coffee beans&quot;, &quot;Popcorn&quot;, &quot;Niter kibbeh&quot;, &quot;Frankincense&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Buna and Popcorn Tradition&quot;, &quot;calories&quot;: 80, &quot;protein&quot;: &quot;2g&quot;, &quot;carbs&quot;: &quot;15g&quot;, &quot;fat&quot;: &quot;2g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$6.99</span>
+            <img src="Buna with Popcorn1.PNG" alt="Buna with Popcorn" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Buna and Popcorn Tradition')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Buna with Popcorn</h3>
+            <p class="short-desc">Traditional Ethiopian coffee served with freshly popped popcorn.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Roasted coffee beans</li>
+                    <li class="ingredient-tag">Popcorn</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                    <li class="ingredient-tag">Frankincense</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Buna and Popcorn Tradition')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 30, &quot;name&quot;: &quot;Buna with Popcorn&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$6.99&quot;, &quot;image&quot;: &quot;Buna with Popcorn1.PNG&quot;, &quot;short_desc&quot;: &quot;Traditional Ethiopian coffee served with freshly popped popcorn.&quot;, &quot;ingredients&quot;: [&quot;Roasted coffee beans&quot;, &quot;Popcorn&quot;, &quot;Niter kibbeh&quot;, &quot;Frankincense&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Buna and Popcorn Tradition&quot;, &quot;calories&quot;: 80, &quot;protein&quot;: &quot;2g&quot;, &quot;carbs&quot;: &quot;15g&quot;, &quot;fat&quot;: &quot;2g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== KURIMI ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="kurimi" data-ingredients="ethiopian coffee beans cardamom cinnamon filtered water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 31, &quot;name&quot;: &quot;Kurimi&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Ethiopian coffee with a hint of cardamom and cinnamon spices.&quot;, &quot;ingredients&quot;: [&quot;Ethiopian coffee beans&quot;, &quot;Cardamom&quot;, &quot;Cinnamon&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Spiced Ethiopian Coffee&quot;, &quot;calories&quot;: 8, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;2g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$5.25</span>
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500" alt="Kurimi" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4TTp06RVy3M', 'Spiced Ethiopian Coffee')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Kurimi</h3>
+            <p class="short-desc">Ethiopian coffee with a hint of cardamom and cinnamon spices.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Ethiopian coffee beans</li>
+                    <li class="ingredient-tag">Cardamom</li>
+                    <li class="ingredient-tag">Cinnamon</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4TTp06RVy3M', 'Spiced Ethiopian Coffee')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 31, &quot;name&quot;: &quot;Kurimi&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.25&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Ethiopian coffee with a hint of cardamom and cinnamon spices.&quot;, &quot;ingredients&quot;: [&quot;Ethiopian coffee beans&quot;, &quot;Cardamom&quot;, &quot;Cinnamon&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Spiced Ethiopian Coffee&quot;, &quot;calories&quot;: 8, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;2g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== METAD SPECIAL ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="metad special" data-ingredients="premium ethiopian blend cocoa notes filtered water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 32, &quot;name&quot;: &quot;Metad Special&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$6.50&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Premium Ethiopian coffee blend with rich chocolate notes.&quot;, &quot;ingredients&quot;: [&quot;Premium Ethiopian blend&quot;, &quot;Cocoa notes&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Premium Coffee Brewing&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$6.50</span>
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500" alt="Metad Special" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4TTp06RVy3M', 'Premium Coffee Brewing')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Metad Special</h3>
+            <p class="short-desc">Premium Ethiopian coffee blend with rich chocolate notes.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Premium Ethiopian blend</li>
+                    <li class="ingredient-tag">Cocoa notes</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4TTp06RVy3M', 'Premium Coffee Brewing')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 32, &quot;name&quot;: &quot;Metad Special&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$6.50&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Premium Ethiopian coffee blend with rich chocolate notes.&quot;, &quot;ingredients&quot;: [&quot;Premium Ethiopian blend&quot;, &quot;Cocoa notes&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Premium Coffee Brewing&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== AGARO FOREST (id 33) ========== -->
+    <div class="gallery-item" data-category="ethiopian-coffee" data-name="agaro forest" data-ingredients="agaro forest beans filtered water">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 33, &quot;name&quot;: &quot;Agaro Forest&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Single-origin coffee from the Agaro forest region with floral notes.&quot;, &quot;ingredients&quot;: [&quot;Agaro Forest beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Agaro Coffee Preparation&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+            <span class="category-badge">Ethiopian Coffee</span>
+            <span class="price-tag">$5.75</span>
+            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500" alt="Agaro Forest" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('4TTp06RVy3M', 'Agaro Coffee Preparation')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Agaro Forest</h3>
+            <p class="short-desc">Single-origin coffee from the Agaro forest region with floral notes.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Agaro Forest beans</li>
+                    <li class="ingredient-tag">Filtered water</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('4TTp06RVy3M', 'Agaro Coffee Preparation')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 33, &quot;name&quot;: &quot;Agaro Forest&quot;, &quot;category&quot;: &quot;ethiopian-coffee&quot;, &quot;price&quot;: &quot;$5.75&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&quot;, &quot;short_desc&quot;: &quot;Single-origin coffee from the Agaro forest region with floral notes.&quot;, &quot;ingredients&quot;: [&quot;Agaro Forest beans&quot;, &quot;Filtered water&quot;], &quot;video_id&quot;: &quot;4TTp06RVy3M&quot;, &quot;video_title&quot;: &quot;Agaro Coffee Preparation&quot;, &quot;calories&quot;: 5, &quot;protein&quot;: &quot;0g&quot;, &quot;carbs&quot;: &quot;1g&quot;, &quot;fat&quot;: &quot;0g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== INJERA SPECIALS ========== -->
+    <!-- ========== VEGETARIAN COMBO ========== -->
+    <div class="gallery-item" data-category="injera" data-name="vegetarian combo" data-ingredients="injera bread shiro misir wot gomen atkilt azifa">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 34, &quot;name&quot;: &quot;Vegetarian Combo&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$14.99&quot;, &quot;image&quot;: &quot;Vegetarian Combo1.PNG&quot;, &quot;short_desc&quot;: &quot;Selection of 5 vegetarian dishes on fresh injera.&quot;, &quot;ingredients&quot;: [&quot;Injera bread&quot;, &quot;Shiro&quot;, &quot;Misir Wot&quot;, &quot;Gomen&quot;, &quot;Atkilt&quot;, &quot;Azifa&quot;], &quot;video_id&quot;: &quot;YDr5smXOf20&quot;, &quot;video_title&quot;: &quot;Ethiopian Vegetarian Combo&quot;, &quot;calories&quot;: 580, &quot;protein&quot;: &quot;18g&quot;, &quot;carbs&quot;: &quot;85g&quot;, &quot;fat&quot;: &quot;22g&quot;})">
+            <span class="category-badge">Injera</span>
+            <span class="price-tag">$14.99</span>
+            <img src="Vegetarian Combo1.PNG" alt="Vegetarian Combo" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('YDr5smXOf20', 'Ethiopian Vegetarian Combo')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Vegetarian Combo</h3>
+            <p class="short-desc">Selection of 5 vegetarian dishes on fresh injera.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Injera bread</li>
+                    <li class="ingredient-tag">Shiro</li>
+                    <li class="ingredient-tag">Misir Wot</li>
+                    <li class="ingredient-tag">Gomen</li>
+                    <li class="ingredient-tag">Atkilt</li>
+                    <li class="ingredient-tag">Azifa</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('YDr5smXOf20', 'Ethiopian Vegetarian Combo')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 34, &quot;name&quot;: &quot;Vegetarian Combo&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$14.99&quot;, &quot;image&quot;: &quot;Vegetarian Combo1.PNG&quot;, &quot;short_desc&quot;: &quot;Selection of 5 vegetarian dishes on fresh injera.&quot;, &quot;ingredients&quot;: [&quot;Injera bread&quot;, &quot;Shiro&quot;, &quot;Misir Wot&quot;, &quot;Gomen&quot;, &quot;Atkilt&quot;, &quot;Azifa&quot;], &quot;video_id&quot;: &quot;YDr5smXOf20&quot;, &quot;video_title&quot;: &quot;Ethiopian Vegetarian Combo&quot;, &quot;calories&quot;: 580, &quot;protein&quot;: &quot;18g&quot;, &quot;carbs&quot;: &quot;85g&quot;, &quot;fat&quot;: &quot;22g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MEAT COMBO ========== -->
+    <div class="gallery-item" data-category="injera" data-name="meat combo" data-ingredients="injera bread doro wat sega wat kitfo tibs gomen atkilt">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 35, &quot;name&quot;: &quot;Meat Combo&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$17.99&quot;, &quot;image&quot;: &quot;Meat Combo1.PNG&quot;, &quot;short_desc&quot;: &quot;Selection of 4 meat dishes plus 2 vegetarian sides.&quot;, &quot;ingredients&quot;: [&quot;Injera bread&quot;, &quot;Doro Wat&quot;, &quot;Sega Wat&quot;, &quot;Kitfo&quot;, &quot;Tibs&quot;, &quot;Gomen&quot;, &quot;Atkilt&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Ethiopian Meat Combo&quot;, &quot;calories&quot;: 720, &quot;protein&quot;: &quot;45g&quot;, &quot;carbs&quot;: &quot;75g&quot;, &quot;fat&quot;: &quot;32g&quot;})">
+            <span class="category-badge">Injera</span>
+            <span class="price-tag">$17.99</span>
+            <img src="Meat Combo1.PNG" alt="Meat Combo" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Ethiopian Meat Combo')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Meat Combo</h3>
+            <p class="short-desc">Selection of 4 meat dishes plus 2 vegetarian sides.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Injera bread</li>
+                    <li class="ingredient-tag">Doro Wat</li>
+                    <li class="ingredient-tag">Sega Wat</li>
+                    <li class="ingredient-tag">Kitfo</li>
+                    <li class="ingredient-tag">Tibs</li>
+                    <li class="ingredient-tag">Gomen</li>
+                    <li class="ingredient-tag">Atkilt</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Ethiopian Meat Combo')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 35, &quot;name&quot;: &quot;Meat Combo&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$17.99&quot;, &quot;image&quot;: &quot;Meat Combo1.PNG&quot;, &quot;short_desc&quot;: &quot;Selection of 4 meat dishes plus 2 vegetarian sides.&quot;, &quot;ingredients&quot;: [&quot;Injera bread&quot;, &quot;Doro Wat&quot;, &quot;Sega Wat&quot;, &quot;Kitfo&quot;, &quot;Tibs&quot;, &quot;Gomen&quot;, &quot;Atkilt&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Ethiopian Meat Combo&quot;, &quot;calories&quot;: 720, &quot;protein&quot;: &quot;45g&quot;, &quot;carbs&quot;: &quot;75g&quot;, &quot;fat&quot;: &quot;32g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FASTING FOOD COMBO (FIXED: new id 36, was duplicate 33) ========== -->
+    <div class="gallery-item" data-category="injera" data-name="fasting food combo" data-ingredients="injera bread shiro misir wot gomen atkilt salad">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 36, &quot;name&quot;: &quot;Fasting Food Combo&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$13.99&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=500&quot;, &quot;short_desc&quot;: &quot;Selection of vegan dishes for fasting periods.&quot;, &quot;ingredients&quot;: [&quot;Injera bread&quot;, &quot;Shiro&quot;, &quot;Misir Wot&quot;, &quot;Gomen&quot;, &quot;Atkilt&quot;, &quot;Salad&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Ethiopian Fasting Food&quot;, &quot;calories&quot;: 480, &quot;protein&quot;: &quot;15g&quot;, &quot;carbs&quot;: &quot;78g&quot;, &quot;fat&quot;: &quot;14g&quot;})">
+            <span class="category-badge">Injera</span>
+            <span class="price-tag">$13.99</span>
+            <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=500" alt="Fasting Food Combo" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Ethiopian Fasting Food')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Fasting Food Combo</h3>
+            <p class="short-desc">Selection of vegan dishes for fasting periods.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Injera bread</li>
+                    <li class="ingredient-tag">Shiro</li>
+                    <li class="ingredient-tag">Misir Wot</li>
+                    <li class="ingredient-tag">Gomen</li>
+                    <li class="ingredient-tag">Atkilt</li>
+                    <li class="ingredient-tag">Salad</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Ethiopian Fasting Food')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 36, &quot;name&quot;: &quot;Fasting Food Combo&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$13.99&quot;, &quot;image&quot;: &quot;https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=500&quot;, &quot;short_desc&quot;: &quot;Selection of vegan dishes for fasting periods.&quot;, &quot;ingredients&quot;: [&quot;Injera bread&quot;, &quot;Shiro&quot;, &quot;Misir Wot&quot;, &quot;Gomen&quot;, &quot;Atkilt&quot;, &quot;Salad&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Ethiopian Fasting Food&quot;, &quot;calories&quot;: 480, &quot;protein&quot;: &quot;15g&quot;, &quot;carbs&quot;: &quot;78g&quot;, &quot;fat&quot;: &quot;14g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== INJERA WITH TIBS ========== -->
+    <div class="gallery-item" data-category="injera" data-name="injera with tibs" data-ingredients="fresh injera beef/lamb/chicken tibs onions peppers rosemary">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 37, &quot;name&quot;: &quot;Injera with Tibs&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$15.50&quot;, &quot;image&quot;: &quot;Injera with Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Fresh injera with your choice of tibs.&quot;, &quot;ingredients&quot;: [&quot;Fresh injera&quot;, &quot;Beef/lamb/chicken tibs&quot;, &quot;Onions&quot;, &quot;Peppers&quot;, &quot;Rosemary&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Injera with Tibs&quot;, &quot;calories&quot;: 520, &quot;protein&quot;: &quot;35g&quot;, &quot;carbs&quot;: &quot;58g&quot;, &quot;fat&quot;: &quot;18g&quot;})">
+            <span class="category-badge">Injera</span>
+            <span class="price-tag">$15.50</span>
+            <img src="Injera with Tibs1.PNG" alt="Injera with Tibs" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Injera with Tibs')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Injera with Tibs</h3>
+            <p class="short-desc">Fresh injera with your choice of tibs.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Fresh injera</li>
+                    <li class="ingredient-tag">Beef/lamb/chicken tibs</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Peppers</li>
+                    <li class="ingredient-tag">Rosemary</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Injera with Tibs')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 37, &quot;name&quot;: &quot;Injera with Tibs&quot;, &quot;category&quot;: &quot;injera&quot;, &quot;price&quot;: &quot;$15.50&quot;, &quot;image&quot;: &quot;Injera with Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Fresh injera with your choice of tibs.&quot;, &quot;ingredients&quot;: [&quot;Fresh injera&quot;, &quot;Beef/lamb/chicken tibs&quot;, &quot;Onions&quot;, &quot;Peppers&quot;, &quot;Rosemary&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Injera with Tibs&quot;, &quot;calories&quot;: 520, &quot;protein&quot;: &quot;35g&quot;, &quot;carbs&quot;: &quot;58g&quot;, &quot;fat&quot;: &quot;18g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TIBS VARIETIES ========== -->
+    <!-- ========== BEEF TIBS ========== -->
+    <div class="gallery-item" data-category="tibs" data-name="beef tibs" data-ingredients="beef tenderloin onions bell peppers rosemary berbere niter kibbeh">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 38, &quot;name&quot;: &quot;Beef Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$15.99&quot;, &quot;image&quot;: &quot;Beef Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Tender beef cubes sautéed with onions.&quot;, &quot;ingredients&quot;: [&quot;Beef tenderloin&quot;, &quot;Onions&quot;, &quot;Bell peppers&quot;, &quot;Rosemary&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Beef Tibs Recipe&quot;, &quot;calories&quot;: 420, &quot;protein&quot;: &quot;38g&quot;, &quot;carbs&quot;: &quot;12g&quot;, &quot;fat&quot;: &quot;26g&quot;})">
+            <span class="category-badge">Tibs</span>
+            <span class="price-tag">$15.99</span>
+            <img src="Beef Tibs1.PNG" alt="Beef Tibs" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Beef Tibs Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Beef Tibs</h3>
+            <p class="short-desc">Tender beef cubes sautéed with onions.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Beef tenderloin</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Bell peppers</li>
+                    <li class="ingredient-tag">Rosemary</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Beef Tibs Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 38, &quot;name&quot;: &quot;Beef Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$15.99&quot;, &quot;image&quot;: &quot;Beef Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Tender beef cubes sautéed with onions.&quot;, &quot;ingredients&quot;: [&quot;Beef tenderloin&quot;, &quot;Onions&quot;, &quot;Bell peppers&quot;, &quot;Rosemary&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Beef Tibs Recipe&quot;, &quot;calories&quot;: 420, &quot;protein&quot;: &quot;38g&quot;, &quot;carbs&quot;: &quot;12g&quot;, &quot;fat&quot;: &quot;26g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== LAMB TIBS ========== -->
+    <div class="gallery-item" data-category="tibs" data-name="lamb tibs" data-ingredients="lamb leg onions tomatoes rosemary berbere mitmita">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 39, &quot;name&quot;: &quot;Lamb Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$17.50&quot;, &quot;image&quot;: &quot;Lamb Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Juicy lamb pieces with Ethiopian spices.&quot;, &quot;ingredients&quot;: [&quot;Lamb leg&quot;, &quot;Onions&quot;, &quot;Tomatoes&quot;, &quot;Rosemary&quot;, &quot;Berbere&quot;, &quot;Mitmita&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Lamb Tibs Cooking&quot;, &quot;calories&quot;: 480, &quot;protein&quot;: &quot;42g&quot;, &quot;carbs&quot;: &quot;10g&quot;, &quot;fat&quot;: &quot;32g&quot;})">
+            <span class="category-badge">Tibs</span>
+            <span class="price-tag">$17.50</span>
+            <img src="Lamb Tibs1.PNG" alt="Lamb Tibs" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Lamb Tibs Cooking')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Lamb Tibs</h3>
+            <p class="short-desc">Juicy lamb pieces with Ethiopian spices.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Lamb leg</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Tomatoes</li>
+                    <li class="ingredient-tag">Rosemary</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Mitmita</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Lamb Tibs Cooking')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 39, &quot;name&quot;: &quot;Lamb Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$17.50&quot;, &quot;image&quot;: &quot;Lamb Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Juicy lamb pieces with Ethiopian spices.&quot;, &quot;ingredients&quot;: [&quot;Lamb leg&quot;, &quot;Onions&quot;, &quot;Tomatoes&quot;, &quot;Rosemary&quot;, &quot;Berbere&quot;, &quot;Mitmita&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Lamb Tibs Cooking&quot;, &quot;calories&quot;: 480, &quot;protein&quot;: &quot;42g&quot;, &quot;carbs&quot;: &quot;10g&quot;, &quot;fat&quot;: &quot;32g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CHICKEN TIBS ========== -->
+    <div class="gallery-item" data-category="tibs" data-name="chicken tibs" data-ingredients="chicken breast lemon juice berbere ginger onions niter kibbeh">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 40, &quot;name&quot;: &quot;Chicken Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$14.99&quot;, &quot;image&quot;: &quot;Chicken Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Tender chicken pieces with berbere spice.&quot;, &quot;ingredients&quot;: [&quot;Chicken breast&quot;, &quot;Lemon juice&quot;, &quot;Berbere&quot;, &quot;Ginger&quot;, &quot;Onions&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;wsJYffn599o&quot;, &quot;video_title&quot;: &quot;Chicken Tibs Recipe&quot;, &quot;calories&quot;: 340, &quot;protein&quot;: &quot;42g&quot;, &quot;carbs&quot;: &quot;8g&quot;, &quot;fat&quot;: &quot;16g&quot;})">
+            <span class="category-badge">Tibs</span>
+            <span class="price-tag">$14.99</span>
+            <img src="Chicken Tibs1.PNG" alt="Chicken Tibs" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('wsJYffn599o', 'Chicken Tibs Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Chicken Tibs</h3>
+            <p class="short-desc">Tender chicken pieces with berbere spice.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Chicken breast</li>
+                    <li class="ingredient-tag">Lemon juice</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Ginger</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('wsJYffn599o', 'Chicken Tibs Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 40, &quot;name&quot;: &quot;Chicken Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$14.99&quot;, &quot;image&quot;: &quot;Chicken Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Tender chicken pieces with berbere spice.&quot;, &quot;ingredients&quot;: [&quot;Chicken breast&quot;, &quot;Lemon juice&quot;, &quot;Berbere&quot;, &quot;Ginger&quot;, &quot;Onions&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;wsJYffn599o&quot;, &quot;video_title&quot;: &quot;Chicken Tibs Recipe&quot;, &quot;calories&quot;: 340, &quot;protein&quot;: &quot;42g&quot;, &quot;carbs&quot;: &quot;8g&quot;, &quot;fat&quot;: &quot;16g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== AWAZE TIBS ========== -->
+    <div class="gallery-item" data-category="tibs" data-name="awaze tibs" data-ingredients="beef cubes awaze sauce tej (honey wine) onions peppers berbere">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 41, &quot;name&quot;: &quot;Awaze Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$16.50&quot;, &quot;image&quot;: &quot;Awaze Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Spicy beef tibs marinated in awaze sauce.&quot;, &quot;ingredients&quot;: [&quot;Beef cubes&quot;, &quot;Awaze sauce&quot;, &quot;Tej (honey wine)&quot;, &quot;Onions&quot;, &quot;Peppers&quot;, &quot;Berbere&quot;], &quot;video_id&quot;: &quot;YuoiZ2W7lOc&quot;, &quot;video_title&quot;: &quot;Awaze Tibs Preparation&quot;, &quot;calories&quot;: 450, &quot;protein&quot;: &quot;38g&quot;, &quot;carbs&quot;: &quot;15g&quot;, &quot;fat&quot;: &quot;28g&quot;})">
+            <span class="category-badge">Tibs</span>
+            <span class="price-tag">$16.50</span>
+            <img src="Awaze Tibs1.PNG" alt="Awaze Tibs" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('YuoiZ2W7lOc', 'Awaze Tibs Preparation')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Awaze Tibs</h3>
+            <p class="short-desc">Spicy beef tibs marinated in awaze sauce.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Beef cubes</li>
+                    <li class="ingredient-tag">Awaze sauce</li>
+                    <li class="ingredient-tag">Tej (honey wine)</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Peppers</li>
+                    <li class="ingredient-tag">Berbere</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('YuoiZ2W7lOc', 'Awaze Tibs Preparation')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 41, &quot;name&quot;: &quot;Awaze Tibs&quot;, &quot;category&quot;: &quot;tibs&quot;, &quot;price&quot;: &quot;$16.50&quot;, &quot;image&quot;: &quot;Awaze Tibs1.PNG&quot;, &quot;short_desc&quot;: &quot;Spicy beef tibs marinated in awaze sauce.&quot;, &quot;ingredients&quot;: [&quot;Beef cubes&quot;, &quot;Awaze sauce&quot;, &quot;Tej (honey wine)&quot;, &quot;Onions&quot;, &quot;Peppers&quot;, &quot;Berbere&quot;], &quot;video_id&quot;: &quot;YuoiZ2W7lOc&quot;, &quot;video_title&quot;: &quot;Awaze Tibs Preparation&quot;, &quot;calories&quot;: 450, &quot;protein&quot;: &quot;38g&quot;, &quot;carbs&quot;: &quot;15g&quot;, &quot;fat&quot;: &quot;28g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SCHOOL FAVORITES ========== -->
+    <!-- ========== FUL ========== -->
+    <div class="gallery-item" data-category="school" data-name="ful" data-ingredients="fava beans onions tomatoes jalapeños berbere olive oil lemon juice">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 42, &quot;name&quot;: &quot;Ful&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$8.99&quot;, &quot;image&quot;: &quot;Ful1.PNG&quot;, &quot;short_desc&quot;: &quot;Mashed fava beans with onions and jalapeños.&quot;, &quot;ingredients&quot;: [&quot;Fava beans&quot;, &quot;Onions&quot;, &quot;Tomatoes&quot;, &quot;Jalapeños&quot;, &quot;Berbere&quot;, &quot;Olive oil&quot;, &quot;Lemon juice&quot;], &quot;video_id&quot;: &quot;J32Sh5LfrwA&quot;, &quot;video_title&quot;: &quot;Ethiopian Ful Recipe&quot;, &quot;calories&quot;: 320, &quot;protein&quot;: &quot;14g&quot;, &quot;carbs&quot;: &quot;48g&quot;, &quot;fat&quot;: &quot;10g&quot;})">
+            <span class="category-badge">School</span>
+            <span class="price-tag">$8.99</span>
+            <img src="Ful1.PNG" alt="Ful" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('J32Sh5LfrwA', 'Ethiopian Ful Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Ful</h3>
+            <p class="short-desc">Mashed fava beans with onions and jalapeños.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Fava beans</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Tomatoes</li>
+                    <li class="ingredient-tag">Jalapeños</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Olive oil</li>
+                    <li class="ingredient-tag">Lemon juice</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('J32Sh5LfrwA', 'Ethiopian Ful Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 42, &quot;name&quot;: &quot;Ful&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$8.99&quot;, &quot;image&quot;: &quot;Ful1.PNG&quot;, &quot;short_desc&quot;: &quot;Mashed fava beans with onions and jalapeños.&quot;, &quot;ingredients&quot;: [&quot;Fava beans&quot;, &quot;Onions&quot;, &quot;Tomatoes&quot;, &quot;Jalapeños&quot;, &quot;Berbere&quot;, &quot;Olive oil&quot;, &quot;Lemon juice&quot;], &quot;video_id&quot;: &quot;J32Sh5LfrwA&quot;, &quot;video_title&quot;: &quot;Ethiopian Ful Recipe&quot;, &quot;calories&quot;: 320, &quot;protein&quot;: &quot;14g&quot;, &quot;carbs&quot;: &quot;48g&quot;, &quot;fat&quot;: &quot;10g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+<!-- Chornake/Pasti (updated with new video) -->
+<div class="gallery-item" data-category="school" data-name="chornake/pasti" data-ingredients="flour water salt oil honey">
+    <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 45, &quot;name&quot;: &quot;Chornake/Pasti&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;\u132e\u122d\u1293\u1244 \u12a0\u1230\u122b\u122d\u1356\u1235\u1272 \u12a0\u1230\u122b\u122d Pasti 1.PNG&quot;, &quot;short_desc&quot;: &quot;Flaky layered bread served with honey.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Water&quot;, &quot;Salt&quot;, &quot;Oil&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;ZhJFMtu5s-8&quot;, &quot;video_title&quot;: &quot;የሻይ ቤቱ ጮርናቄ አሰራር / ብስኩት / ቁርስ / ፖስቲ biscuit aserar / snack / donut&quot;, &quot;calories&quot;: 260, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;42g&quot;, &quot;fat&quot;: &quot;8g&quot;})">
+        <span class="category-badge">School</span>
+        <span class="price-tag">$7.50</span>
+        <img src="ጮርናቄ አሰራርፖስቲ አሰራር Pasti 1.PNG" alt="Chornake/Pasti" loading="lazy">
+        <div class="play-button" onclick="event.stopPropagation(); openVideoModal('ZhJFMtu5s-8', 'የሻይ ቤቱ ጮርናቄ አሰራር / ብስኩት / ቁርስ / ፖስቲ biscuit aserar / snack / donut')">
+            <i class="fas fa-play"></i>
+        </div>
+    </div>
+    <div class="gallery-content">
+        <h3>Chornake/Pasti</h3>
+        <p class="short-desc">Flaky layered bread served with honey.</p>
+
+        <div class="ingredients-section">
+            <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+            <ul class="ingredients-list">
+                <li class="ingredient-tag">Flour</li>
+                <li class="ingredient-tag">Water</li>
+                <li class="ingredient-tag">Salt</li>
+                <li class="ingredient-tag">Oil</li>
+                <li class="ingredient-tag">Honey</li>
+            </ul>
+        </div>
+
+        <div class="gallery-actions">
+            <button class="btn btn-secondary" onclick="openVideoModal('ZhJFMtu5s-8', 'የሻይ ቤቱ ጮርናቄ አሰራር / ብስኩት / ቁርስ / ፖስቲ biscuit aserar / snack / donut')">
+                <i class="fas fa-play-circle"></i> Watch Video
+            </button>
+            <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 45, &quot;name&quot;: &quot;Chornake/Pasti&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;\u132e\u122d\u1293\u1244 \u12a0\u1230\u122b\u122d\u1356\u1235\u1272 \u12a0\u1230\u122b\u122d Pasti 1.PNG&quot;, &quot;short_desc&quot;: &quot;Flaky layered bread served with honey.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Water&quot;, &quot;Salt&quot;, &quot;Oil&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;ZhJFMtu5s-8&quot;, &quot;video_title&quot;: &quot;የሻይ ቤቱ ጮርናቄ አሰራር / ብስኩት / ቁርስ / ፖስቲ biscuit aserar / snack / donut&quot;, &quot;calories&quot;: 260, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;42g&quot;, &quot;fat&quot;: &quot;8g&quot;})">
+                <i class="fas fa-info-circle"></i> Details
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- ========== CHECHEBSA ========== -->
+    <div class="gallery-item" data-category="school" data-name="chechebsa" data-ingredients="flour water yeast berbere niter kibbeh honey">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 43, &quot;name&quot;: &quot;Chechebsa&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$9.50&quot;, &quot;image&quot;: &quot;Chechebsa1.PNG&quot;, &quot;short_desc&quot;: &quot;Spiced fried bread with berbere and honey.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Water&quot;, &quot;Yeast&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;YJFH4jkCTy4&quot;, &quot;video_title&quot;: &quot;Chechebsa Making&quot;, &quot;calories&quot;: 380, &quot;protein&quot;: &quot;8g&quot;, &quot;carbs&quot;: &quot;62g&quot;, &quot;fat&quot;: &quot;12g&quot;})">
+            <span class="category-badge">School</span>
+            <span class="price-tag">$9.50</span>
+            <img src="Chechebsa1.PNG" alt="Chechebsa" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('YJFH4jkCTy4', 'Chechebsa Making')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Chechebsa</h3>
+            <p class="short-desc">Spiced fried bread with berbere and honey.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Flour</li>
+                    <li class="ingredient-tag">Water</li>
+                    <li class="ingredient-tag">Yeast</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                    <li class="ingredient-tag">Honey</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('YJFH4jkCTy4', 'Chechebsa Making')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 43, &quot;name&quot;: &quot;Chechebsa&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$9.50&quot;, &quot;image&quot;: &quot;Chechebsa1.PNG&quot;, &quot;short_desc&quot;: &quot;Spiced fried bread with berbere and honey.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Water&quot;, &quot;Yeast&quot;, &quot;Berbere&quot;, &quot;Niter kibbeh&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;YJFH4jkCTy4&quot;, &quot;video_title&quot;: &quot;Chechebsa Making&quot;, &quot;calories&quot;: 380, &quot;protein&quot;: &quot;8g&quot;, &quot;carbs&quot;: &quot;62g&quot;, &quot;fat&quot;: &quot;12g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== DABO KOLO ========== -->
+    <div class="gallery-item" data-category="school" data-name="dabo kolo" data-ingredients="barley flour water sugar cardamom niter kibbeh berbere">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 44, &quot;name&quot;: &quot;Dabo Kolo&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$5.99&quot;, &quot;image&quot;: &quot;Dabo Kolo1.PNG&quot;, &quot;short_desc&quot;: &quot;Roasted barley snack, perfect with coffee.&quot;, &quot;ingredients&quot;: [&quot;Barley flour&quot;, &quot;Water&quot;, &quot;Sugar&quot;, &quot;Cardamom&quot;, &quot;Niter kibbeh&quot;, &quot;Berbere&quot;], &quot;video_id&quot;: &quot;_sIPYhSW2qE&quot;, &quot;video_title&quot;: &quot;Dabo Kolo Preparation&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;4g&quot;, &quot;carbs&quot;: &quot;35g&quot;, &quot;fat&quot;: &quot;3g&quot;})">
+            <span class="category-badge">School</span>
+            <span class="price-tag">$5.99</span>
+            <img src="Dabo Kolo1.PNG" alt="Dabo Kolo" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('_sIPYhSW2qE', 'Dabo Kolo Preparation')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Dabo Kolo</h3>
+            <p class="short-desc">Roasted barley snack, perfect with coffee.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Barley flour</li>
+                    <li class="ingredient-tag">Water</li>
+                    <li class="ingredient-tag">Sugar</li>
+                    <li class="ingredient-tag">Cardamom</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                    <li class="ingredient-tag">Berbere</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('_sIPYhSW2qE', 'Dabo Kolo Preparation')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 44, &quot;name&quot;: &quot;Dabo Kolo&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$5.99&quot;, &quot;image&quot;: &quot;Dabo Kolo1.PNG&quot;, &quot;short_desc&quot;: &quot;Roasted barley snack, perfect with coffee.&quot;, &quot;ingredients&quot;: [&quot;Barley flour&quot;, &quot;Water&quot;, &quot;Sugar&quot;, &quot;Cardamom&quot;, &quot;Niter kibbeh&quot;, &quot;Berbere&quot;], &quot;video_id&quot;: &quot;_sIPYhSW2qE&quot;, &quot;video_title&quot;: &quot;Dabo Kolo Preparation&quot;, &quot;calories&quot;: 180, &quot;protein&quot;: &quot;4g&quot;, &quot;carbs&quot;: &quot;35g&quot;, &quot;fat&quot;: &quot;3g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FATIRA (FIXED: was broken, now complete) ========== -->
+    <div class="gallery-item" data-category="school" data-name="fatira" data-ingredients="flour oil egg honey niter kibbeh">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 45, &quot;name&quot;: &quot;Fatira&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;Fatira1.PNG&quot;, &quot;short_desc&quot;: &quot;Flaky layered bread served with honey.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Oil&quot;, &quot;Egg (optional)&quot;, &quot;Honey&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;K9s5rb27kxE&quot;, &quot;video_title&quot;: &quot;Fatira Recipe&quot;, &quot;calories&quot;: 280, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;45g&quot;, &quot;fat&quot;: &quot;9g&quot;})">
+            <span class="category-badge">School</span>
+            <span class="price-tag">$7.50</span>
+            <img src="Fatira1.PNG" alt="Fatira" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('K9s5rb27kxE', 'Fatira Recipe')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Fatira</h3>
+            <p class="short-desc">Flaky layered bread served with honey.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Flour</li>
+                    <li class="ingredient-tag">Oil</li>
+                    <li class="ingredient-tag">Egg (optional)</li>
+                    <li class="ingredient-tag">Honey</li>
+                    <li class="ingredient-tag">Niter kibbeh</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('K9s5rb27kxE', 'Fatira Recipe')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 45, &quot;name&quot;: &quot;Fatira&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;Fatira1.PNG&quot;, &quot;short_desc&quot;: &quot;Flaky layered bread served with honey.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Oil&quot;, &quot;Egg (optional)&quot;, &quot;Honey&quot;, &quot;Niter kibbeh&quot;], &quot;video_id&quot;: &quot;K9s5rb27kxE&quot;, &quot;video_title&quot;: &quot;Fatira Recipe&quot;, &quot;calories&quot;: 280, &quot;protein&quot;: &quot;6g&quot;, &quot;carbs&quot;: &quot;45g&quot;, &quot;fat&quot;: &quot;9g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MOYA ========== -->
+    <div class="gallery-item" data-category="school" data-name="moya" data-ingredients="flour water oil butter honey">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 46, &quot;name&quot;: &quot;Moya&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;Moya1.PNG&quot;, &quot;short_desc&quot;: &quot;Traditional Ethiopian flaky bread with unique folding.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Water&quot;, &quot;Oil&quot;, &quot;Butter&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Moya Bread Making&quot;, &quot;calories&quot;: 270, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;44g&quot;, &quot;fat&quot;: &quot;8g&quot;})">
+            <span class="category-badge">School</span>
+            <span class="price-tag">$7.50</span>
+            <img src="Moya1.PNG" alt="Moya" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('t4zgoR_8UJY', 'Moya Bread Making')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Moya</h3>
+            <p class="short-desc">Traditional Ethiopian flaky bread with unique folding.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Flour</li>
+                    <li class="ingredient-tag">Water</li>
+                    <li class="ingredient-tag">Oil</li>
+                    <li class="ingredient-tag">Butter</li>
+                    <li class="ingredient-tag">Honey</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('t4zgoR_8UJY', 'Moya Bread Making')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 46, &quot;name&quot;: &quot;Moya&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;Moya1.PNG&quot;, &quot;short_desc&quot;: &quot;Traditional Ethiopian flaky bread with unique folding.&quot;, &quot;ingredients&quot;: [&quot;Flour&quot;, &quot;Water&quot;, &quot;Oil&quot;, &quot;Butter&quot;, &quot;Honey&quot;], &quot;video_id&quot;: &quot;t4zgoR_8UJY&quot;, &quot;video_title&quot;: &quot;Moya Bread Making&quot;, &quot;calories&quot;: 270, &quot;protein&quot;: &quot;5g&quot;, &quot;carbs&quot;: &quot;44g&quot;, &quot;fat&quot;: &quot;8g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SAMBUSA ========== -->
+    <div class="gallery-item" data-category="school" data-name="sambusa" data-ingredients="pastry dough lentils or ground meat onions garlic berbere oil for frying">
+        <div class="gallery-image-wrapper" onclick="openDetailModal({&quot;id&quot;: 47, &quot;name&quot;: &quot;Sambusa&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;Sambusa1.PNG&quot;, &quot;short_desc&quot;: &quot;Crispy fried pastry filled with spiced lentils or meat.&quot;, &quot;ingredients&quot;: [&quot;Pastry dough&quot;, &quot;Lentils or ground meat&quot;, &quot;Onions&quot;, &quot;Garlic&quot;, &quot;Berbere&quot;, &quot;Oil for frying&quot;], &quot;video_id&quot;: &quot;3OZn-iCGf5s&quot;, &quot;video_title&quot;: &quot;Sambusa Making&quot;, &quot;calories&quot;: 240, &quot;protein&quot;: &quot;8g&quot;, &quot;carbs&quot;: &quot;32g&quot;, &quot;fat&quot;: &quot;10g&quot;})">
+            <span class="category-badge">School</span>
+            <span class="price-tag">$7.50</span>
+            <img src="Sambusa1.PNG" alt="Sambusa" loading="lazy">
+            <div class="play-button" onclick="event.stopPropagation(); openVideoModal('3OZn-iCGf5s', 'Sambusa Making')">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div class="gallery-content">
+            <h3>Sambusa</h3>
+            <p class="short-desc">Crispy fried pastry filled with spiced lentils or meat.</p>
+            <div class="ingredients-section">
+                <h4><i class="fas fa-shopping-basket"></i> Ingredients</h4>
+                <ul class="ingredients-list">
+                    <li class="ingredient-tag">Pastry dough</li>
+                    <li class="ingredient-tag">Lentils or ground meat</li>
+                    <li class="ingredient-tag">Onions</li>
+                    <li class="ingredient-tag">Garlic</li>
+                    <li class="ingredient-tag">Berbere</li>
+                    <li class="ingredient-tag">Oil for frying</li>
+                </ul>
+            </div>
+            <div class="gallery-actions">
+                <button class="btn btn-secondary" onclick="openVideoModal('3OZn-iCGf5s', 'Sambusa Making')">
+                    <i class="fas fa-play-circle"></i> Watch Video
+                </button>
+                <button class="btn btn-primary" onclick="openDetailModal({&quot;id&quot;: 47, &quot;name&quot;: &quot;Sambusa&quot;, &quot;category&quot;: &quot;school&quot;, &quot;price&quot;: &quot;$7.50&quot;, &quot;image&quot;: &quot;Sambusa1.PNG&quot;, &quot;short_desc&quot;: &quot;Crispy fried pastry filled with spiced lentils or meat.&quot;, &quot;ingredients&quot;: [&quot;Pastry dough&quot;, &quot;Lentils or ground meat&quot;, &quot;Onions&quot;, &quot;Garlic&quot;, &quot;Berbere&quot;, &quot;Oil for frying&quot;], &quot;video_id&quot;: &quot;3OZn-iCGf5s&quot;, &quot;video_title&quot;: &quot;Sambusa Making&quot;, &quot;calories&quot;: 240, &quot;protein&quot;: &quot;8g&quot;, &quot;carbs&quot;: &quot;32g&quot;, &quot;fat&quot;: &quot;10g&quot;})">
+                    <i class="fas fa-info-circle"></i> Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+        </div>
+
+        <!-- Video & Detail Modals -->
+        <div class="video-modal" id="videoModal"><div class="video-container"><span class="video-close" onclick="closeVideoModal()"><i class="fas fa-times"></i></span><div class="video-wrapper"><iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe></div><div class="video-title" id="videoTitle"></div></div></div>
+        <div class="detail-modal" id="detailModal"><div class="detail-content"><div class="detail-header"><img id="detailImage" alt=""><button class="detail-close" onclick="closeDetailModal()"><i class="fas fa-times"></i></button></div><div class="detail-body"><h2 id="detailName"></h2><div class="detail-price" id="detailPrice"></div><p class="detail-description" id="detailDesc"></p><div class="detail-section"><h3><i class="fas fa-shopping-basket"></i> Ingredients</h3><div class="detail-ingredients" id="detailIngredients"></div></div><div class="detail-section"><h3><i class="fas fa-chart-pie"></i> Nutrition Facts</h3><div class="nutrition-grid"><div class="nutrition-item"><div class="nutrition-value" id="detailCalories"></div><div class="nutrition-label">Calories</div></div><div class="nutrition-item"><div class="nutrition-value" id="detailProtein"></div><div class="nutrition-label">Protein</div></div><div class="nutrition-item"><div class="nutrition-value" id="detailCarbs"></div><div class="nutrition-label">Carbs</div></div><div class="nutrition-item"><div class="nutrition-value" id="detailFat"></div><div class="nutrition-label">Fat</div></div></div></div><div class="detail-section"><button class="btn btn-primary" onclick="playDetailVideo()" style="width:100%"><i class="fas fa-play-circle"></i> Watch How It's Made</button></div></div></div></div>
+
+        <!-- Sidebar Navigation (slides from left) -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <div class="sidebar" id="sidebarNav">
+            <div class="sidebar-header">
+                <span class="sidebar-logo">U Café</span>
+                <div class="close-sidebar" id="closeSidebarBtn"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="sidebar-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+                <a href="testimonials.html"><i class="fas fa-star"></i> Testimonials</a>
+                <a href="gallery.html" class="active"><i class="fas fa-images"></i> Gallery</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="login.html" class="signin-link"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+            </div>
+            <div class="sidebar-footer">
+                <p><i class="fas fa-coffee"></i> Ayer-Amba Student Project</p>
+                <p>Ethiopian tradition & digital fusion</p>
+            </div>
+        </div>
+
+        <footer><div class="container"><div class="footer-grid"><div><img src="u cafe 1 logo.png" alt="U Café logo"><h4>U Café</h4><p>Born at Ayer-Amba Secondary School, combining Ethiopian tradition with digital innovation.</p></div><div><h4>Quick Links</h4><p><a href="index.html">Home</a></p><p><a href="about1.html">About us</a></p><p><a href="menu.html">Our Menu</a></p><p><a href="gallery.html">Gallery</a></p><p><a href="testimonials.html">Testimonials</a></p></div><div><h4>Traditional Menu</h4><p><a href="#" onclick="filterByCategory('ethiopian-coffee')">Ethiopian Coffee</a></p><p><a href="#" onclick="filterByCategory('injera')">Injera Specials</a></p><p><a href="#" onclick="filterByCategory('tibs')">Tibs Varieties</a></p><p><a href="#" onclick="filterByCategory('school')">School Favorites</a></p></div><div><h4>Student Newsletter</h4><p>Subscribe for special offers and updates!</p><input type="email" placeholder="Your email" style="width:100%; padding:12px; margin-top:10px; border-radius:8px; border:1px solid #ddd;"><button style="width:100%; margin-top:10px; padding:12px; background:linear-gradient(90deg, var(--accent), #a95733); color:white; border:none; border-radius:8px; font-weight:600;">Subscribe</button></div></div><div class="footer-bottom"><p>© <span id="year"></span> U Online Cafe • A student initiative from Ayer-Amba Secondary School</p></div></div></footer>
+     <script src="gallery.js"></script>   
+</body>
+</html>
